@@ -15,7 +15,7 @@
 //     return view('welcome');
 // });
 
-Route::get('/','DashboardController@showDashboard');
+Route::get('home','DashboardController@showDashboard');
 
 Route::get('inventario','InventoryController@showInventory');
 

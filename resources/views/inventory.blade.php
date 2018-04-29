@@ -1,16 +1,12 @@
 @extends('layouts.master')
 
-
 @section('pageTitle','Escritorio')
 
 @section('content')
-<center><h2>Inventario:</h2></center>
 <div class="contenedor">
   <form>
     <div class="form-group">
-      <br>
-      <br>
-      <h4>Agregar Producto</h4>
+      <h3>Agregar Producto</h3>
       <br>
           <label>Categoría:</label>
           <select class="form-control">
@@ -39,7 +35,7 @@
     </div>
     <div class="contenedor">
           <div class="form-group">
-            <h3>Productos:</h3>
+            <h3>Productos</h3>
         <div class="table-responsive">
           <table class="table table-bordered">
             <thead class="thead-light">
@@ -53,7 +49,6 @@
                    <th>Precio:</th>
                    <th>Costo:</th>
                    <th>Existencia:</th>
-                  
               </tr>
            </thead>
            <tbody>

@@ -11,4 +11,21 @@ $("#toggle-menu").click(function(){
   $("#toggle-menu .fa-bars").toggleClass("not-displayed");
   $("#toggle-menu .fa-align-left").toggleClass("show");
 });
+
+$(document).ready(function() {
+		var current = location.pathname;
+		var last2="";
+		var last="";
+		var clicked="";
+		alert(last2,last);
+		$('.sidenav a').click(function() {
+				var clicked = $(this).attr("href");
+				last = current.substring(current.lastIndexOf("/") + 1, current.length);
+				last2 = clicked.substring(clicked.lastIndexOf("/") + 1, clicked.length);
+
+				//$('.sidenav a .icon-nav').children().removeClass("active");
+				//$(this).find('div').addClass("active");
+		});
+});
+
 </script>

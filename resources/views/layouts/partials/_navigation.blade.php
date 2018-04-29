@@ -1,5 +1,5 @@
 <div class="sidenav primary-color light-font">
-  <a href="{{url('/')}}"><div class="icon-nav"><i class="fas fa-home fa-2x"></i></div><div class="text-nav">Escritorio</div></a>
+  <a href="{{url('home')}}"><div class="icon-nav"><i class="fas fa-home fa-2x"></i></div><div class="text-nav">Escritorio</div></a>
   <a href="{{url('iniciarVenta')}}"><div class="icon-nav"><i class="fab fa-opencart fa-2x"></i></div><div class="text-nav">Iniciar venta</div></a>
   <a href="{{url('inventario')}}"><div class="icon-nav"><i class="fas fa-box-open fa-2x"></i></div><div class="text-nav">Inventario</div></a>
   <a href="{{url('productos')}}"><div class="icon-nav"><i class="fas fa-th-large fa-2x"></i></div><div class="text-nav">Productos</div></a>

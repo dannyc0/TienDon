@@ -7,14 +7,6 @@
     <link rel="stylesheet" href="css/master.css">
   </head>
   <body>
-    {{-- @include('layouts.partials._topMenu');
-    @include('layouts.partials._navigation')
-
-    <div id="main">
-      @yield('content')
-    </div>
-
-    @include('layouts.partials._foot') --}}
     <body class="main-content-color">
       @include('layouts.partials._topMenu')
       @include('layouts.partials._navigation')
