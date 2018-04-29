@@ -3,25 +3,29 @@
 @section('pageTitle','Escritorio')
 
 @section('content')
+<div class="contenedor">
   <form>
           <div class="form-group">
-            <h3>Buscar por:</h3>
-            <label>Categoría:</label>
+            <h3>Registrar Venta</h3>
+            <br>
+            <label>Filtrar por:</label>
             <select class="form-control">
-            <option>Lacteos</option>
-            <option>Embutidos</option>
-            <option>Bebidas</option>
-            <option>Limpieza</option>
+            <option>Categoría</option>
+            <option>Código</option>
+            <option>Nombre</option>
             </select>
-            <label>Código:</label>
-            <input type="text">
-            <label>Nombre:</label>
-            <input type="text">
-            <button type="button"><label class="lnr lnr-magnifier"><font></font></label></button>
+            <div class="text-right">
+                  <br>
+                  <button type="submit" class="btn btn-outline-primary">
+                    Buscar
+                  </button>
+            </div>
         </div>
-            <div class="form-group">
-          <table>
-  				<thead>
+  </form>
+        <div class="form-group">
+          <div class="table-responsive">
+          <table class="table table-bordered">
+  				<thead class="thead-light">
     				<tr>
      					 <th>Código:</th>
      					 <th>Categoría:</th>
@@ -41,16 +45,18 @@
                 <td>200 ml.</td>
                 <td>$50</td>
       					<td>
-        <div>
-        	<button type="button"><label class="lnr lnr-select"><font></font></label></button>
-        </div>
-        <div class="LineaDetalle">
-
-
-        </div>
+                  <center><button type="submit" class="btn btn-outline-success">
+                    Seleccionar
+                  </button></center>
       </td>
     </tr>
  </tbody>
 </table>
-</div> </form>
+</div> 
+</form>
+</div>
+</div>
+<div class="contenedor">
+  
+</div>
 @endsection

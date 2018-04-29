@@ -3,53 +3,82 @@
 @section('pageTitle','Escritorio')
 
 @section('content')
+
+<div class="contenedor">
   <form>
           <div class="form-group">
+            <h3>Proveedores</h3>
+            <br>
             <label>Código:</label>
-            <input type="text" name="">
+            <input type="text" name="" class="form-control">
             <label>Nombre:</label>
-            <input type="text" name="">
+            <input type="text" name="" class="form-control">
             <label>Teléfono:</label>
-            <input type="text">
+            <input type="text" class="form-control">
             <label>Logotipo:</label>
+            <br>
             <input type="file" name="">
             <br>
-            <br>
-            <button type="button"><label class="lnr lnr-file-add"><font></font>Agregar</label></button>
-
-        </div>
-            <div class="form-group">
-              <h3>Buscar por:</h3>
+            <div class="text-right">
               <br>
-              <label>Nombre:</label>
-              <input type="text" name="">
-              <label>Código:</label>
-              <input type="text" name="">
-                <button type="button"><label class="lnr lnr-magnifier"><font></font></label></button>
-                <br>
-                <br>
-                <table>
-  				<thead>
-    				<tr>
-     					 <th>Código:</th>
-     					 <th>Nombre:</th>
-      					 <th>Teléfono:</th>
-                 <th>Logotipo:</th>
-      					 <th></th>
-    				</tr>
- 				 </thead>
-  			<tbody>
-    				<tr>
-      					<td>GA005</td>
-     				 	<td>Gamesa</td>
-     					<td>5554538287</td>
-      					<td>IMAGEN</td>
-      					<td>
-              <button type="button"><label class="lnr lnr-sync"><font></font>Actualizar</label></button>
-              <button type="button"><label class="lnr lnr-trash"><font></font></label></button>
-      </td>
-    </tr>
- </tbody>
-</table>
-</div> </form>
+              <button type="submit" class="btn btn-outline-primary">
+                Agregar
+              </button>
+              <button type="submit" class="btn btn-outline-success">
+                Guardar Cambios
+              </button>
+            </div>
+          </div>
+    </form>
+  </div>
+  <div class="contenedor">
+    <form>
+            <div class="form-group">
+              <h3>Buscar Proveedor</h3>
+              <br>
+              <label>Filtrar por:</label>
+                <select class="form-control">
+                <option>Código</option>
+                <option>Nombre</option>
+                </select>
+                <div class="text-right">
+                  <br>
+                  <button type="submit" class="btn btn-outline-primary">
+                    Buscar
+                  </button>
+            </div>
+              <br>
+              <br>
+            <div class="table-responsive">
+              <table class="table table-bordered">
+  				        <thead class="thead-light">
+    				          <tr>
+     					            <th>Código:</th>
+     					            <th>Nombre:</th>
+      					          <th>Teléfono:</th>
+                          <th>Logotipo:</th>
+      					         <th></th>
+    				          </tr>
+ 				         </thead>
+  			         <tbody>
+    				         <tr>
+      					         <td>GA005</td>
+     				             <td>Gamesa</td>
+     				             <td>5554538287</td>
+      				           <td>IMAGEN</td>
+      					         <td>
+                          <center><button type="submit" class="btn btn-outline-success">
+                             Actualizar
+                          </button>
+                          <button type="submit" class="btn btn-outline-danger">
+                             Eliminar
+                           </button></center>
+                         </td>
+                        </tr>
+                </tbody>
+              </table>
+            </div>
+             </div>
+         </form>
+      </div>
 @endsection

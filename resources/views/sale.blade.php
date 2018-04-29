@@ -3,9 +3,13 @@
 @section('pageTitle','Escritorio')
 
 @section('content')
+
+<div class="contenedor">
   <form>
           <div class="form-group">
-            <label>Buscar por: </label>
+            <h3>Registro De Ventas</h3>
+            <br>
+            <label>Filtrar por: </label>
             <select class="form-control">
             <option>Día</option>
             <option>Semana</option>
@@ -13,14 +17,24 @@
             <option>Año</option>
             </select>
             <label>Periodo de:</label>
-            <input type="date">
-            <label>a</label>
-            <input type="date">
-            <button type="button"><label class="lnr lnr-magnifier"><font></font></label></button>
+            <input type="date" class="form-control">
+            <label>A</label>
+            <input type="date" class="form-control">
+            <div class="text-right">
+                  <br>
+                  <button type="submit" class="btn btn-outline-primary">
+                    Buscar
+                  </button>
+            </div>
         </div>
-            <div class="form-group">
-          <table>
-  				<thead>
+    </form>
+  </div>
+  <div class="contenedor">
+    <form>
+        <div class="form-group">
+          <div  class="table-responsive">
+          <table class="table table-bordered">
+  				<thead class="thead-light">
     				<tr>
      					 <th>Fecha:</th>
      					 <th>Monto:</th>
@@ -31,17 +45,20 @@
  				 </thead>
   			<tbody>
     				<tr>
-      					<td>2018-04-12</td>
+      				<td>2018-04-12</td>
      				 	<td>560</td>
      					<td>200</td>
-      					<td>Andrea Lizeth Calleja Quintanar</td>
-      					<td>
-        <div>
-        	<button type="button"><label class="lnr lnr-trash"><font></font></label></button>
-        </div>
-      </td>
+      				<td>Andrea Lizeth Calleja Quintanar</td>
+      				<td>
+                <center><button type="submit" class="btn btn-outline-danger">
+                    Eliminar
+              </button></center>
+              </td>
     </tr>
  </tbody>
 </table>
-</div> </form>
+</div> 
+</div>
+</form>
+</div>
 @endsection

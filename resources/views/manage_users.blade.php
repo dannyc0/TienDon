@@ -3,10 +3,14 @@
 @section('pageTitle','Escritorio')
 
 @section('content')
+<div class="contenedor">
   <form>
-            <div class="form-group">
-          <table>
-  				<thead>
+        <div class="form-group">
+          <h3>Usuarios</h3>
+          <br>
+        <div class="table-responsive">
+          <table class="table table-bordered">
+  				<thead class="thead-light">
     				<tr>
      					 <th>CURP:</th>
      					 <th>Nombre(S):</th>
@@ -19,26 +23,32 @@
   			<tbody>
     				<tr>
       					<td>CAQA961130MDFLNN02</td>
-     				 	<td>Andrea Lizeth</td>
-     					<td>Calleja</td>
+     				 	  <td>Andrea Lizeth</td>
+     					  <td>Calleja</td>
       					<td>Quintanar</td>
                 <td>Administrador</td>
       					<td>
-                <button type="button"><label class="lnr lnr-pencil"><font></font>Administrar</label></button>
-                <button type="button"><label class="lnr lnr-trash"><font></font></label></button>
-        </div>
+                <button type="submit" class="btn btn-outline-success">
+                    Administrar
+                </button>
+                <button type="submit" class="btn btn-outline-danger">
+                    Eliminar
+                </button>
       </td>
     </tr>
  </tbody>
 </table>
 </div>
+</div>
 </form>
-        <br>
-        <br>
-        <br>
-        <div class="administrar">
-          <table>
-            <thead>
+</div>
+
+      <div class="contenedor">
+        <form>
+          <div class="form-group">
+            <div class="table-responsive">
+          <table class="table table-md">
+            <thead class="thead-light">
               <tr>
                 <th>Nombre(S):</th>
                 <th>Primer Apellido:</th>
@@ -60,5 +70,13 @@
             <option>Administrador</option>
             <option>Cajero</option>
             </select>
-            <button type="button"><label>Agregar</label></button>
+            <div class="text-right">
+              <br>
+            <button type="submit" class="btn btn-outline-primary">
+                    Agregar
+            </button>
+          </div>
+  </div>
+</form>
+</div>
 @endsection
