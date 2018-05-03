@@ -7,8 +7,28 @@
   background-color: #399bff;
 }
 
+.secondary-color{
+  background-color: #e32012; /*red*/
+}
+
 .white-color{
   background-color: #fff;
+}
+
+.green-color{
+  background-color: #2ecc71;
+}
+
+.blue-color{
+  background-color: #16a085;
+}
+
+.light-font{
+  color: #fff;
+}
+
+.red-font{
+  color: #e32012;
 }
 
 /*TopMenu
@@ -109,11 +129,11 @@
 }
 
 .sidenav a:hover, .dropdown-btn:hover{
-  border-left: 4px #f44336 solid;
+  border-left: 4px #e32012 solid;
 }
 
 .sidenav a .icon-nav.active{
-  color: red;
+  color: #e32012;
 }
 
 .sidenav a{
@@ -153,6 +173,26 @@
 }
 #main.toggled{
   margin: 60px 0 0 300px;
+}
+
+.modal-header{
+  background-color: #e32012;
+  color: #fff;
+}
+
+.card-container{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.summary-card{
+  padding: 20px 40px;
+  width: 500px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 
