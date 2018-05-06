@@ -2,7 +2,7 @@
   namespace App\Http\Controllers;
 
   use App\Http\Controllers\Controller;
-  Use View;
+  use View;
 
   class InventoryController extends Controller{
 
@@ -11,9 +11,10 @@
       $products = ['Yomi Lala','Coca cola','Fanta','Gansito'];
       $inventory = array(array('PE129','Lacteos','Lala','Yomi Lala','200ml','unidad','$12.00','$10.00','20'));
 
-      $products_sum = 50;
+      $products_sum = 1190;
+      $inventory_value = 19892;
 
-      return View::make('inventory.index',compact('categories','products','inventory'));
+      return View::make('inventory.index',compact('categories','products','inventory','products_sum','inventory_value'));
     }
 
   }

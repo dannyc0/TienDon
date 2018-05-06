@@ -3,6 +3,47 @@
 @section('pageTitle','Escritorio')
 
 @section('content')
+  <div class="card-container light-font">
+    <div class="summary-card secondary-color">
+      <div class="card-icon">
+        <i class="fas fa-hashtag fa-5x"></i>
+      </div>
+      <div class="card-content">
+        <div class="title">
+          <h1 class="display-7">Ventas hoy</h1>
+        </div>
+        <div class="content">
+          <h4 class="text-center"><b>@yield('totalSales')</b></h4>
+        </div>
+      </div>
+    </div>
+    <div class="summary-card green-color">
+      <div class="card-icon">
+        <i class="fas fa-dollar-sign fa-5x"></i>
+      </div>
+      <div class="card-content">
+        <div class="title">
+          <h1 class="display-7">Ventas hoy</h1>
+        </div>
+        <div class="content">
+          <h4 class="text-center"><b>@yield('salesSum')</b></h4>
+        </div>
+      </div>
+    </div>
+    <div class="summary-card green-color">
+      <div class="card-icon">
+        <i class="fas fa-dollar-sign fa-5x"></i>
+      </div>
+      <div class="card-content">
+        <div class="title">
+          <h1 class="display-7">Ganancia</h1>
+        </div>
+        <div class="content">
+          <h4 class="text-center"><b>@yield('gain')</b></h4>
+        </div>
+      </div>
+    </div>
+  </div>
 
 <div class="contenedor">
   <form>
@@ -45,10 +86,7 @@
  				 </thead>
   			<tbody>
     				<tr>
-      				<td>2018-04-12</td>
-     				 	<td>560</td>
-     					<td>200</td>
-      				<td>Andrea Lizeth Calleja Quintanar</td>
+      				@yield('rowData')
       				<td>
                 <center><button type="submit" class="btn btn-outline-danger">
                     Eliminar
@@ -57,7 +95,7 @@
     </tr>
  </tbody>
 </table>
-</div> 
+</div>
 </div>
 </form>
 </div>

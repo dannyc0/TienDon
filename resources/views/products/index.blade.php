@@ -1,8 +1,6 @@
-@extends('inventory.master')
+@extends('products.master')
 
 @section('productsSum',$products_sum)
-
-@section('inventoryValue',$inventory_value)
 
 @section('categories')
     @foreach ($categories as $category)
@@ -10,14 +8,14 @@
     @endforeach
 @endsection
 
-@section('products')
-    @foreach ($products as $product)
-      <option>{{$product}}</option>
+@section('brands')
+    @foreach ($brands as $brand)
+      <option>{{$brand}}</option>
     @endforeach
 @endsection
 
 @section('rowData')
-    @foreach ($inventory as $element)
+    @foreach ($products as $element)
       <td>{{$element[0]}}</td>
       <td>{{$element[1]}}</td>
       <td>{{$element[2]}}</td>
@@ -26,6 +24,5 @@
       <td>{{$element[5]}}</td>
       <td>{{$element[6]}}</td>
       <td>{{$element[7]}}</td>
-      <td>{{$element[8]}}</td>
     @endforeach
 @endsection

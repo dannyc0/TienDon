@@ -10,9 +10,9 @@
             <br>
             <label>Filtrar por:</label>
             <select class="form-control">
-            <option>Categoría</option>
-            <option>Código</option>
-            <option>Nombre</option>
+              <option>Categoría</option>
+              <option>Código</option>
+              <option>Nombre</option>
             </select>
             <div class="text-right">
                   <br>
@@ -38,12 +38,7 @@
  				  </thead>
   			  <tbody>
     			  <tr>
-        			<td>LA002</td>
-     				 	<td>Lácteos</td>
-     					<td>Lala</td>
-      				<td>Yomi Lala</td>
-              <td>200 ml.</td>
-              <td>$50</td>
+        			@yield('products')
       				<td>
                 <center>
                   <button type="submit" class="btn btn-outline-success">
@@ -71,9 +66,7 @@
       </thead>
       <tbody>
         <tr>
-          <td>LA002</td>
-          <td>Yomi Lala</td>
-          <td>$50</td>
+          @yield('rowData')
         </tr>
       </tbody>
     </table>

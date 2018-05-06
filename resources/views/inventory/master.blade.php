@@ -13,7 +13,7 @@
         <h1 class="display-7">Total de productos</h1>
       </div>
       <div class="content">
-        <h4 class="text-center"><b>50</b></h4>
+        <h4 class="text-center"><b>@yield('productsSum')</b></h4>
       </div>
     </div>
   </div>
@@ -26,7 +26,7 @@
         <h1 class="display-7">Valor de inventario</h1>
       </div>
       <div class="content">
-        <h4 class="text-center"><b>18,260</b></h4>
+        <h4 class="text-center"><b>@yield('inventoryValue')</b></h4>
       </div>
     </div>
   </div>
