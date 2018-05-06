@@ -3,7 +3,7 @@
 @section('pageTitle','Escritorio')
 
 @section('content')
-  <h2>Bienvenido al sistema de control de ventas e inventarios:</h2>
+  <h2>Holi</h2>
   <br>
   <br>
   <br>
