@@ -30,3 +30,5 @@ Route::get('venta','SaleController@showSale');
 Route::get('reportes','ReportsController@showReports');
 
 Route::get('administrarUsuarios','ManageUsersController@showManagement');
+
+Route::get('acercaDe','AboutController@showAbout');
