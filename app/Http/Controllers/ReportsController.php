@@ -7,7 +7,7 @@
   class ReportsController extends Controller{
 
     public function showReports(){
-      return View::make('reports.master');//,compact());
+      return View::make('reports.index');//,compact());
     }
 
   }

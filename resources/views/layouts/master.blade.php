@@ -6,7 +6,6 @@
     <link rel="stylesheet" href="css/app.css">
     <link rel="stylesheet" href="css/master.css">
   </head>
-  <body>
     <body class="main-content-color">
       @include('layouts.partials._topMenu')
       @include('layouts.partials._navigation')
@@ -18,5 +17,4 @@
     </body>
     @include('layouts.partials._foot')
     <script type="text/javascript" src="js/app.js"></script>
-  </body>
 </html>

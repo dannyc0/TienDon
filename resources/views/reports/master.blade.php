@@ -3,5 +3,5 @@
 @section('pageTitle','Escritorio')
 
 @section('content')
-  <h2>Bienvenido a los reportes</h2>
+  <h2>@yield('titulo')</h2>
 @endsection

@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@section('pageTitle','Escritorio')
+@section('pageTitle','Venta nueva')
 
 @section('content')
 <div class="contenedor">

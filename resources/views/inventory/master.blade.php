@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@section('pageTitle','Escritorio')
+@section('pageTitle','Inventario')
 
 @section('content')
 <div class="card-container light-font">
@@ -74,9 +74,7 @@
               </tr>
            </thead>
            <tbody>
-              <tr>
-                  @yield('rowData')
-              </tr>
+              @yield('rowData')
           </tbody>
         </table>
       </div>
