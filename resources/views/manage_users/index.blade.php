@@ -23,5 +23,6 @@
       <td>{{$element[1]}}</td>
       <td>{{$element[2]}}</td>
       <td>{{$element[3]}}</td>
+      <td>{{$element[4]}}</td>
     @endforeach
 @endsection

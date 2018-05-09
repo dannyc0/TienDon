@@ -31,30 +31,6 @@
     </div>
   </div>
 </div>
-<div class="contenedor">
-  <form>
-    <div class="form-group">
-      <h3>Agregar producto al inventario</h3>
-      <br>
-          <label>Categoría:</label>
-          <select class="form-control">
-            @yield('categories');
-          </select><br>
-          <label>Producto:</label>
-          <select class="form-control">
-            @yield('products')
-          </select><br>
-          <label>Cantidad:</label>
-          <input type="text" class="form-control">
-          <br>
-          <div class="text-right">
-            <button type="submit" class="btn btn-outline-primary">
-              Agregar
-            </button>
-          </div>
-  </form>
-      </div>
-    </div>
     <div class="contenedor">
           <div class="form-group">
             <h3>Inventario</h3>
@@ -80,4 +56,28 @@
       </div>
 </div>
 </div>
+<div class="contenedor">
+  <form>
+    <div class="form-group">
+      <h3>Agregar producto al inventario</h3>
+      <br>
+          <label>Categoría:</label>
+          <select class="form-control">
+            @yield('categories');
+          </select><br>
+          <label>Producto:</label>
+          <select class="form-control">
+            @yield('products')
+          </select><br>
+          <label>Cantidad:</label>
+          <input type="text" class="form-control">
+          <br>
+          <div class="text-right">
+            <button type="submit" class="btn btn-outline-primary">
+              Agregar
+            </button>
+          </div>
+  </form>
+      </div>
+    </div>
 @endsection
