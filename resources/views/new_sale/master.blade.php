@@ -4,7 +4,8 @@
 
 @section('content')
 <div class="row">
-<div class="contenedor">
+  <div class="col-md-9">
+    <div class="contenedor">
   <form>
         
           <div class="form-row">
@@ -35,15 +36,15 @@
             <label>Cantidad:</label>
             <input type="number" class="form-control" placeholder="Cantidad" >
           </div>
-          <div class="col-md-2 mb-3">
+          <div class="col-md-1 mb-3">
             <br><br>
             <label>Pza.</label>
             
           </div>
-          <div class="col-md-8 mb-3 text-right">
+          <div class="col-md-3 mb-3 text-center form-button">
             <button type="submit" class="btn btn-outline-success">
-                    Agregar
-                  </button>
+              Agregar
+            </button>
           </div>
           </div>
           
@@ -69,7 +70,12 @@
     </table>
   </div>
 </div>
-        <label>Total a Pagar:</label>
+        
+</div>
+  </div>
+  <div class="col-md-3">
+    <div class="contenedor">
+      <label>Total a Pagar:</label>
         <br>
         <form class="form-inline">
            <div class="form-group text-right">
@@ -79,7 +85,9 @@
   
             </div>
             </form>
-</div>
+    </div>
+
+  </div>
 </div>
   <div class="modal fade" id="modalSale" role="dialog">
     <div class="modal-dialog">

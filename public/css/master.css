@@ -209,3 +209,10 @@
   width: 100% !important;
 }
 
+.form-button{
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  flex-direction: column;
+  padding-bottom: 8px;
+}
