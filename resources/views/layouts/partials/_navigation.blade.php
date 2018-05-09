@@ -7,5 +7,5 @@
   <a href="{{url('venta')}}" id="venta"><div class="icon-nav"><i class="fas fa-shopping-basket fa-2x"></i></div><div class="text-nav">Ventas</div></a>
   <a href="{{url('reportes')}}" id="reportes"><div class="icon-nav"><i class="fas fa-chart-pie fa-2x"></i></div><div class="text-nav">Reportes</div></a>
   <a href="{{url('administrarUsuarios')}}" id="administrarUsuarios"><div class="icon-nav"><i class="fas fa-cogs fa-2x"></i></div><div class="text-nav">Administrar usuarios</div></a>
-  {{-- <a href="{{url('acercaDe')}}" id="acercaDe"><div class="icon-nav"><i class="fas fa-info-circle fa-2x"></i></div><div class="text-nav">Acerca de</div></a> --}}
+  <a href="{{url('acercaDe')}}" id="acercaDe"><div class="icon-nav"><i class="fas fa-info-circle fa-2x"></i></div><div class="text-nav">Acerca de</div></a>
 </div>
