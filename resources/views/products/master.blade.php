@@ -21,6 +21,74 @@
 <div class="contenedor">
   <form>
     <div class="form-group">
+      <h3>Buscar Producto</h3>
+      <br>
+      <div class="form-row">
+            <br>
+            <label>Filtrar por:</label>
+            </div>
+            <div class="form-row">
+            <div class="col-md-3 mb-3">
+              <label>Código:</label>
+            <select class="form-control">
+                <option>CO9812</option>
+                <option>RE9812</option>
+                <option>BLE9812</option>
+            </select>
+          </div >
+          <div class="col-md-3 mb-3">
+            <label>Nombre:</label>
+            <select class="form-control">
+                <option>Coca-cola 200ml</option>
+                <option>Yomi lala 250 ml</option>
+                <option>Pino 200ml</option>
+            </select>
+          </div>
+      <div class="col-md-3 mb-3">
+        <br>
+        <button type="submit" class="btn btn-outline-primary">
+          Buscar
+        </button>
+      </div>
+      <br>
+      <br>
+    </div>
+      <div class="table-responsive">
+        <table class="table table-bordered">
+  				<thead class="thead-light">
+    				<tr>
+     			      <th>Código:</th>
+     					  <th>Categoría:</th>
+      				  <th>Marca:</th>
+                <th>Nombre:</th>
+                <th>Presentación:</th>
+                <th>Tipo:</th>
+                <th>Costo:</th>
+                <th>Precio:</th>
+      					<th></th>
+    				</tr>
+ 				 </thead>
+  			 <tbody>
+    				<tr>
+              @yield('rowData')
+      				<td>
+                <button type="submit" class="btn btn-outline-success">
+                      Actualizar
+                </button>
+                <button type="submit" class="btn btn-outline-danger">
+                      Eliminar
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </form>
+</div>
+<div class="contenedor">
+  <form>
+    <div class="form-group">
       <h3>Productos</h3>
       <br>
       <label>Código:</label>
@@ -54,58 +122,6 @@
         <button type="submit" class="btn btn-outline-success">
               Guardar Cambios
         </button>
-      </div>
-    </div>
-  </form>
-</div>
-<div class="contenedor">
-  <form>
-    <div class="form-group">
-      <h3>Buscar Producto</h3>
-      <br>
-      <label>Filtrar por:</label>
-      <select class="form-control">
-        <option>Código</option>
-        <option>Nombre</option>
-        <option>Categoria</option>
-      </select>
-      <div class="text-right">
-        <br>
-        <button type="submit" class="btn btn-outline-primary">
-          Buscar
-        </button>
-      </div>
-      <br>
-      <br>
-      <div class="table-responsive">
-        <table class="table table-bordered">
-  				<thead class="thead-light">
-    				<tr>
-     			      <th>Código:</th>
-     					  <th>Categoría:</th>
-      				  <th>Marca:</th>
-                <th>Nombre:</th>
-                <th>Presentación:</th>
-                <th>Tipo:</th>
-                <th>Costo:</th>
-                <th>Precio:</th>
-      					<th></th>
-    				</tr>
- 				 </thead>
-  			 <tbody>
-    				<tr>
-              @yield('rowData')
-      				<td>
-                <button type="submit" class="btn btn-outline-success">
-                      Actualizar
-                </button>
-                <button type="submit" class="btn btn-outline-danger">
-                      Eliminar
-                </button>
-              </td>
-            </tr>
-          </tbody>
-        </table>
       </div>
     </div>
   </form>

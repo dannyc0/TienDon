@@ -17,15 +17,23 @@
             <div class="form-row">
             <div class="col-md-3 mb-3">
               <label>Código:</label>
-            <input type="text" class="form-control" placeholder="Código">
+            <select class="form-control">
+                <option>CO9812</option>
+                <option>RE9812</option>
+                <option>BLE9812</option>
+            </select>
           </div >
           <div class="col-md-3 mb-3">
             <label>Nombre:</label>
-            <input type="text" class="form-control" placeholder="Nombre" >
+            <select class="form-control">
+                <option>Coca-cola 200ml</option>
+                <option>Yomi lala 250 ml</option>
+                <option>Pino 200ml</option>
+            </select>
           </div>
           <div class="col-md-2 mb-3">
             <label>Cantidad:</label>
-            <input type="text" class="form-control" placeholder="Cantidad" >
+            <input type="number" class="form-control" placeholder="Cantidad" >
           </div>
           <div class="col-md-2 mb-3">
             <br><br>
@@ -39,11 +47,6 @@
           </div>
           </div>
           
-       
-          <div class="form-row">
-            
-        </div>
-      
   </form>
   <div class="form-group">
   <br>
