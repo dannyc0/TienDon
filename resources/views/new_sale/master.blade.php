@@ -73,18 +73,18 @@
         
 </div>
   </div>
-  <div class="col-md-3">
-    <div class="contenedor">
-      <label>Total a Pagar:</label>
-        <br>
-        <form class="form-inline">
-           <div class="form-group text-right">
-              <label>Efectivo</label>
-               <input type="number" class="form-control mx-sm-3">
-               <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalSale" data-backdrop="static">Finalizar venta</button>
+  <div class="col-md-3 payment-container">
+    <div class="contenedor text-center">
+      <h4>Total a Pagar:</h4>
+          <h5 class="mb-5">@yield('total')</h5>
+        <form>
+           <div class="form-group text-center">
+              <h4>Efectivo</h4>
+               <input type="number" class="form-control mb-5">
+               <button type="button" class="btn btn-success" data-toggle="modal" data-target="#modalSale" data-backdrop="static">Finalizar venta</button>
   
             </div>
-            </form>
+        </form>
     </div>
 
   </div>
