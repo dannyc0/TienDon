@@ -63,6 +63,7 @@
               <th>Nombre(S):</th>
               <th>Primer Apellido:</th>
               <th>Segundo Apellido:</th>
+              <th>Rol:</th>
             </tr>
           </thead>
           <tbody>
