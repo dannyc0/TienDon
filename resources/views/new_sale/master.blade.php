@@ -42,7 +42,7 @@
             
           </div>
           <div class="col-md-3 mb-3 text-center form-button">
-            <button type="submit" class="btn btn-outline-success">
+            <button type="submit" class="btn btn-outline-primary">
               Agregar
             </button>
           </div>
