@@ -4,7 +4,8 @@
 
 @section('content')
 <div class="row">
-<div class="contenedor">
+  <div class="col-md-9">
+    <div class="contenedor">
   <form>
         
           <div class="form-row">
@@ -35,15 +36,15 @@
             <label>Cantidad:</label>
             <input type="number" class="form-control" placeholder="Cantidad" >
           </div>
-          <div class="col-md-2 mb-3">
+          <div class="col-md-1 mb-3">
             <br><br>
             <label>Pza.</label>
             
           </div>
-          <div class="col-md-8 mb-3 text-right">
-            <button type="submit" class="btn btn-outline-success">
-                    Agregar
-                  </button>
+          <div class="col-md-3 mb-3 text-center form-button">
+            <button type="submit" class="btn btn-outline-primary">
+              Agregar
+            </button>
           </div>
           </div>
           
@@ -69,17 +70,24 @@
     </table>
   </div>
 </div>
-        <label>Total a Pagar:</label>
-        <br>
-        <form class="form-inline">
-           <div class="form-group text-right">
-              <label>Efectivo</label>
-               <input type="number" class="form-control mx-sm-3">
-               <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalSale" data-backdrop="static">Finalizar venta</button>
+        
+</div>
+  </div>
+  <div class="col-md-3 payment-container">
+    <div class="contenedor text-center">
+      <h4>Total a Pagar:</h4>
+          <h5 class="mb-5">@yield('total')</h5>
+        <form>
+           <div class="form-group text-center">
+              <h4>Efectivo</h4>
+               <input type="number" class="form-control mb-5">
+               <button type="button" class="btn btn-success" data-toggle="modal" data-target="#modalSale" data-backdrop="static">Finalizar venta</button>
   
             </div>
-            </form>
-</div>
+        </form>
+    </div>
+
+  </div>
 </div>
   <div class="modal fade" id="modalSale" role="dialog">
     <div class="modal-dialog">

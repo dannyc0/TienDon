@@ -50,16 +50,8 @@
           <div class="form-group">
             <h3>Registro De Ventas</h3>
             <br>
-            <label>Filtrar por: </label>
-            <select class="form-control">
-            <option>Día</option>
-            <option>Semana</option>
-            <option>Mes</option>
-            <option>Año</option>
             </select>
-            <label>Periodo de:</label>
-            <input type="date" class="form-control">
-            <label>A</label>
+            <label>Fecha:</label>
             <input type="date" class="form-control">
             <div class="text-right">
                   <br>
@@ -79,7 +71,8 @@
     				<tr>
      					 <th>Fecha:</th>
      					 <th>Monto:</th>
-      					 <th>Ganancia:</th>
+               <th>Ganancia:</th>
+               <th>Numero de Ventas</th>
                  <th>Cajero:</th>
       					 <th></th>
     				</tr>
@@ -95,6 +88,10 @@
     </tr>
  </tbody>
 </table>
+<br><label>Total de ventas: @yield('totalVentas')</label><br>
+
+<br><label>Total de ganancias: @yield('totalganancias')</label>
+
 </div>
 </div>
 </form>

@@ -215,3 +215,24 @@
   width: 100% !important;
 }
 
+.form-button{
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  flex-direction: column;
+  padding-bottom: 9px;
+}
+
+.payment-container{
+   display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-button2{
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  flex-direction: column;
+  padding-top: 8px;
+}

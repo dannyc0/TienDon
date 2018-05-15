@@ -24,7 +24,6 @@
       <h3>Buscar Producto</h3>
       <br>
       <div class="form-row">
-            <br>
             <label>Filtrar por:</label>
             </div>
             <div class="form-row">
@@ -46,12 +45,12 @@
           </div>
       <div class="col-md-3 mb-3">
         <br>
-        <button type="submit" class="btn btn-outline-primary">
-          Buscar
-        </button>
+        <div class="col-md-3 mb-3 text-center form-button2">
+            <button type="submit" class="btn btn-outline-primary">
+              Buscar
+            </button>
+          </div>
       </div>
-      <br>
-      <br>
     </div>
       <div class="table-responsive">
         <table class="table table-bordered">
