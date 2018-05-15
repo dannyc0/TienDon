@@ -9,7 +9,8 @@
     public function showDashboard(){
 
     	 $ganDa = 4688;
-      return View::make('dashboard.index',compact('ganDa'));
+    	 $masVen = "CocaCola600ml";
+      return View::make('dashboard.index',compact('ganDa','masVen'));
 
      
     }
