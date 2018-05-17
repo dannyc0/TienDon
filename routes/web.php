@@ -15,7 +15,13 @@
 //     return view('welcome');
 // });
 
-Route::get('home','DashboardController@showDashboard');
+//Route::get('/','LoginController@showLogin');
+
+Route::get('/','DashboardController@showDashboard');
+
+//Route::get('login','LoginController@showLogin');
+
+Route::get('/home','DashboardController@showDashboard');
 
 Route::get('inventario','InventoryController@showInventory');
 
@@ -32,3 +38,7 @@ Route::get('reportes','ReportsController@showReports');
 Route::get('administrarUsuarios','ManageUsersController@showManagement');
 
 Route::get('acercaDe','AboutController@showAbout');
+
+Auth::routes();
+
+//Route::get('/home', 'HomeController@index')->name('home');
