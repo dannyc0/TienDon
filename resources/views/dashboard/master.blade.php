@@ -4,7 +4,7 @@
 
 @section('content')
 
-<br><br><br>><div class="card-container light-font">
+<br><br><br><div class="card-container light-font">
   <div class="summary-card green-color">
     <div class="card-icon">
       <i class="fas fa-dollar-sign fa-5x"></i>
