@@ -1,5 +1,6 @@
 @extends('inventory.master')
 
+
 @section('productsSum',$products_sum)
 
 @section('inventoryValue',$inventory_value)
