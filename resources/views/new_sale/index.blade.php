@@ -1,5 +1,7 @@
 @extends('new_sale.master')
 
+@section('total','$200')
+
 @section('products')
     @foreach ($products as $element)
       <td>{{$element[0]}}</td>

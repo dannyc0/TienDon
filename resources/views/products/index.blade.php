@@ -2,15 +2,15 @@
 
 @section('productsSum',$products_sum)
 
-@section('categories')
-    @foreach ($categories as $category)
-      <option>{{$category}}</option>
+@section('code')
+    @foreach ($codes as $code)
+      <option>{{$code['id_producto']}}</option>
     @endforeach
 @endsection
 
-@section('brands')
-    @foreach ($brands as $brand)
-      <option>{{$brand}}</option>
+@section('name')
+    @foreach ($names as $name)
+      <option>{{$name['nombre_producto']}}</option>
     @endforeach
 @endsection
 

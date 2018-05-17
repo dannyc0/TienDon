@@ -24,34 +24,29 @@
       <h3>Buscar Producto</h3>
       <br>
       <div class="form-row">
-            <br>
             <label>Filtrar por:</label>
             </div>
             <div class="form-row">
             <div class="col-md-3 mb-3">
               <label>Código:</label>
             <select class="form-control">
-                <option>CO9812</option>
-                <option>RE9812</option>
-                <option>BLE9812</option>
+                @yield('code')
             </select>
           </div >
           <div class="col-md-3 mb-3">
             <label>Nombre:</label>
             <select class="form-control">
-                <option>Coca-cola 200ml</option>
-                <option>Yomi lala 250 ml</option>
-                <option>Pino 200ml</option>
+                @yield('name')
             </select>
           </div>
       <div class="col-md-3 mb-3">
         <br>
-        <button type="submit" class="btn btn-outline-primary">
-          Buscar
-        </button>
+        <div class="col-md-3 mb-3 text-center form-button2">
+            <button type="submit" class="btn btn-outline-primary">
+              Buscar
+            </button>
+          </div>
       </div>
-      <br>
-      <br>
     </div>
       <div class="table-responsive">
         <table class="table table-bordered">

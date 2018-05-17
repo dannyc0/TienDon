@@ -46,15 +46,13 @@
           </div>
       <div class="col-md-3 mb-3">
         <br>
-        <button type="submit" class="btn btn-outline-primary">
-          Buscar
-        </button>
+        <div class="col-md-3 mb-3 text-center form-button2">
+            <button type="submit" class="btn btn-outline-primary">
+              Buscar
+            </button>
+          </div>
       </div>
-      <br>
-      <br>
     </div>
-              <br>
-              <br>
             <div class="table-responsive">
               <table class="table table-bordered">
   				        <thead class="thead-light">

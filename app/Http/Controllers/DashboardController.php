@@ -7,7 +7,12 @@
   class DashboardController extends Controller{
 
     public function showDashboard(){
-      return View::make('dashboard.index');//,compact());
+
+    	 $ganDa = 4688;
+    	 $masVen = "CocaCola600ml";
+      return View::make('dashboard.index',compact('ganDa','masVen'));
+
+     
     }
 
   }
