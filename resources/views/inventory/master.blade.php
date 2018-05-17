@@ -31,7 +31,43 @@
     </div>
   </div>
 </div>
-    <div class="contenedor">
+<div class="contenedor">
+  <div class="col-md-12">
+  <form>
+    <div class="form-row">
+      <h3>Agregar producto al inventario</h3>
+    </div>
+      <br>
+      <div class="form-row">
+            <div class="col-md-3 mb-2">
+          <label>Categoría:</label>
+          <select class="form-control">
+            @yield('categories');
+          </select><br>
+        </div>
+        
+            <div class="col-md-3 mb-3">
+          <label>Producto:</label>
+          <select class="form-control">
+            @yield('products')
+          </select><br>
+        </div>
+       
+            <div class="col-md-3   mb-3">
+          <label>Cantidad:</label>
+          <input type="text" class="form-control">
+        </div>
+       <div class="col-md-3 mb-3"><br>
+            <button type="submit" class="btn btn-outline-primary">
+              Agregar
+            </button>
+          </div>
+        </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="contenedor ">
           <div class="form-group">
             <h3>Inventario</h3>
         <div class="table-responsive">
@@ -56,28 +92,4 @@
       </div>
 </div>
 </div>
-<div class="contenedor">
-  <form>
-    <div class="form-group">
-      <h3>Agregar producto al inventario</h3>
-      <br>
-          <label>Categoría:</label>
-          <select class="form-control">
-            @yield('categories');
-          </select><br>
-          <label>Producto:</label>
-          <select class="form-control">
-            @yield('products')
-          </select><br>
-          <label>Cantidad:</label>
-          <input type="text" class="form-control">
-          <br>
-          <div class="text-right">
-            <button type="submit" class="btn btn-outline-primary">
-              Agregar
-            </button>
-          </div>
-  </form>
-      </div>
-    </div>
 @endsection
