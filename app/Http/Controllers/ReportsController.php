@@ -7,7 +7,8 @@
   class ReportsController extends Controller{
 
     public function showReports(){
-      return View::make('reports.index');//,compact());
+    	$reportsV=array(array("2018-05-14","Ventas"));
+      return View::make('reports.index',compact('reportsV'));//,compact());
     }
 
   }
