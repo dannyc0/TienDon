@@ -31,17 +31,13 @@
             <div class="col-md-3 mb-3">
               <label>Código:</label>
             <select class="form-control">
-                <option>GA812</option>
-                <option>CCA9812</option>
-                <option>BO9812</option>
+                @yield('code')
             </select>
           </div >
           <div class="col-md-3 mb-3">
             <label>Nombre:</label>
             <select class="form-control">
-                <option>Gamesa</option>
-                <option>Coca-Cola</option>
-                <option>Bonafon</option>
+                @yield('name')
             </select>
           </div>
       <div class="col-md-3 mb-3">

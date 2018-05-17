@@ -3,17 +3,17 @@
 @section('productsSum',$products_sum)
 
 @section('code')
-    @foreach ($codes as $code)
-      <option>{{$code['id_producto']}}</option>
+    @foreach ($products as $product)
+      <option>{{$product['id_producto']}}</option>
     @endforeach
 @endsection
 
 @section('name')
-    @foreach ($names as $name)
-      <option>{{$name['nombre_producto']}}</option>
+    @foreach ($products as $product)
+      <option>{{$product['nombre_producto']}}</option>
     @endforeach
 @endsection
-
+<!--
 @section('rowData')
     @foreach ($products as $element)
       <td>{{$element[0]}}</td>
@@ -26,3 +26,4 @@
       <td>{{$element[7]}}</td>
     @endforeach
 @endsection
+-->
