@@ -27,6 +27,8 @@ Route::get('inventario','InventoryController@showInventory');
 
 Route::get('iniciarVenta','NewSaleController@showNewSale');
 
+Route::get('categorias','CategoryController@showCategory');
+
 Route::get('productos','ProductController@showProduct');
 
 Route::get('proveedores','SupplierController@showSupplier');
