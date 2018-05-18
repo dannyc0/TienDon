@@ -12,7 +12,7 @@
     	 $masVen = "CocaCola600ml";
       return View::make('dashboard.index',compact('ganDa','masVen'));
 
-     
+
     }
 
   }

@@ -17,7 +17,7 @@
 
 //Route::get('/','LoginController@showLogin');
 
-Route::get('/','DashboardController@showDashboard');
+Route::get('/','Auth\LoginController@showLoginForm');
 
 //Route::get('login','LoginController@showLogin');
 
@@ -26,6 +26,8 @@ Route::get('/home','DashboardController@showDashboard');
 Route::get('inventario','InventoryController@showInventory');
 
 Route::get('iniciarVenta','NewSaleController@showNewSale');
+
+Route::get('personalInfo','PersonalInfoController@showPersonalInfo');
 
 Route::get('categorias','CategoryController@showCategory');
 
