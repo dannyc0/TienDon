@@ -57,7 +57,7 @@
           <label>Cantidad:</label>
           <input type="text" class="form-control">
         </div>
-       <div class="col-md-3 mb-3"><br>
+       <div class="col-md-3 mb-3 form-button3"><br>
             <button type="submit" class="btn btn-outline-primary">
               Agregar
             </button>
