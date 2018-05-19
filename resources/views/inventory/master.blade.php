@@ -39,7 +39,7 @@
     </div>
       <br>
       <div class="form-row">
-            <div class="col-md-3 mb-2">
+            <div class="col-md-3 mb-3">
           <label>Categoría:</label>
           <select class="form-control">
             @yield('categories');
@@ -53,10 +53,15 @@
           </select><br>
         </div>
        
-            <div class="col-md-3   mb-3">
+            <div class="col-md-2 mb-3">
           <label>Cantidad:</label>
           <input type="text" class="form-control">
         </div>
+        <div class="col-md-1 mb-3">
+            <br><br>
+            <label id="piezaInventario">Pza.</label>
+            
+          </div>
        <div class="col-md-3 mb-3 form-button3"><br>
             <button type="submit" class="btn btn-outline-primary">
               Agregar
@@ -75,11 +80,9 @@
             <thead class="thead-light">
               <tr>
                  <th>Código:</th>
-                 <th>Categoría:</th>
-                 <th>Marca:</th>
                  <th>Nombre:</th>
-                 <th>Presentación:</th>
-                 <th>Tipo:</th>
+                 <!--<th>Presentación:</th>-->
+                 <!--<th>Tipo:</th>-->
                  <th>Precio:</th>
                  <th>Costo:</th>
                  <th>Existencia:</th>

@@ -34,7 +34,7 @@
           </div>
           <div class="col-md-1 mb-3">
             <br><br>
-            <label>Pza.</label>
+            <label id="piezaVenta">Pza.</label>
             
           </div>
           <div class="col-md-3 mb-3 text-center form-button">
@@ -61,6 +61,11 @@
       <tbody>
         <tr>
           @yield('rowData')
+          <td>
+            <button type="submit" class="btn btn-outline-danger">
+                        Eliminar
+            </button>
+          </td>
         </tr>
       </tbody>
     </table>

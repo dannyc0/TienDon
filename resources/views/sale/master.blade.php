@@ -10,7 +10,7 @@
       </div>
       <div class="card-content">
         <div class="title">
-          <h1 class="display-7">Ventas hoy</h1>
+          <h1 class="display-7">No. Ventas</h1>
         </div>
         <div class="content">
           <h4 class="text-center"><b>@yield('totalSales')</b></h4>
@@ -23,7 +23,7 @@
       </div>
       <div class="card-content">
         <div class="title">
-          <h1 class="display-7">Ventas hoy</h1>
+          <h1 class="display-7">Total Ventas</h1>
         </div>
         <div class="content">
           <h4 class="text-center"><b>@yield('salesSum')</b></h4>

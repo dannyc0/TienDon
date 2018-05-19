@@ -80,22 +80,22 @@
 <div class="contenedor">
   <form>
     <div class="form-group">
-      <h3>Categorías</h3>
+      <h3>Nueva Categoría</h3>
       <br>
       <label>Código:</label>
-      <input type="text" name="" class="form-control">
+      <input type="text" name="" class="form-control" readonly="" id="codigoCategoria">
       <label>Nombre:</label>
-      <input type="text" class="form-control">
+      <input type="text" class="form-control" id="nombreCategoria">
       <label>Descripción:</label>
-      <input type="text" name="" class="form-control">
+      <input type="text" name="" class="form-control" id="descripcionCategoria">
       <div class="text-right">
         <br>
-        <button type="submit" class="btn btn-outline-primary">
+        <button type="submit" class="btn btn-outline-primary" id="botonCategoria">
           Agregar
         </button>
-        <button type="submit" class="btn btn-outline-success">
+        <!--<button type="submit" class="btn btn-outline-success">
               Guardar Cambios
-        </button>
+        </button>-->
       </div>
     </div>
   </form>

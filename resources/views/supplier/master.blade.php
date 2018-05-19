@@ -81,26 +81,23 @@
   <div class="contenedor">
   <form>
           <div class="form-group">
-            <h3>Proveedores</h3>
+            <h3>Nuevo Proveedor</h3>
             <br>
             <label>Código:</label>
-            <input type="text" name="" class="form-control">
+            <input type="text" name="" class="form-control" readonly="" id="codigoProveedor">
             <label>Nombre:</label>
-            <input type="text" name="" class="form-control">
+            <input type="text" name="" class="form-control" id="nombreProveedor">
             <label>Teléfono:</label>
-            <input type="text" class="form-control">
-            <label>Logotipo:</label>
-            <br>
-            <input type="file" name="">
+            <input type="text" class="form-control" id="telefonoProveedor">
             <br>
             <div class="text-right">
               <br>
-              <button type="submit" class="btn btn-outline-primary">
+              <button type="submit" class="btn btn-outline-primary" id="botonProveedor">
                 Agregar
               </button>
-              <button type="submit" class="btn btn-outline-success">
+              <!--<button type="submit" class="btn btn-outline-success">
                 Guardar Cambios
-              </button>
+              </button>-->
             </div>
           </div>
     </form>

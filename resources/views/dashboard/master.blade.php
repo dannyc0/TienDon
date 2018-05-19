@@ -4,7 +4,8 @@
 
 @section('content')
 
-<br><br><br><div class="card-container light-font">
+<br><br><br><br><br><br><br><br>
+<div class="card-container light-font">
   <div class="summary-card green-color">
     <div class="card-icon">
       <i class="fas fa-dollar-sign fa-5x"></i>
@@ -33,9 +34,9 @@
   </div>
 </div>
 
-<br><br><center><button type="button" class="btn btn-success btn-lg" style='width:180px; height:70px'>Iniciar Venta</button>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<!--<br><br><center><button type="button" class="btn btn-success btn-lg" style='width:180px; height:70px'>Iniciar Venta</button>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
 
-<button type="button" class="btn btn-danger btn-lg" style='width:180px; height:70px'>Cerrar Día</button></center>
+<button type="button" class="btn btn-danger btn-lg" style='width:180px; height:70px'>Cerrar Día</button></center>-->
 
 
 

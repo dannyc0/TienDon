@@ -84,39 +84,39 @@
 <div class="contenedor">
   <form>
     <div class="form-group">
-      <h3>Productos</h3>
+      <h3>Nuevo Producto</h3>
       <br>
-      <label>Código:</label>
+      <label id="codigoProducto">Código:</label>
       <input type="text" name="" class="form-control">
       <label>Categoría:</label>
-      <select class="form-control">
+      <select class="form-control id" id="categoriaProducto">
         @yield('categories')
       </select>
       <label>Marca:</label>
-      <select class="form-control">
+      <select class="form-control" id="marcaProducto">
         @yield('brands')
       </select>
       <label>Nombre:</label>
-      <input type="text" class="form-control">
+      <input type="text" class="form-control" id="nombreProducto">
       <label>Presentación:</label>
-      <input type="text" name="" class="form-control">
+      <input type="text" name="" class="form-control" id="presentacionProducto">
       <label>Tipo de Producto:</label>
-      <select class="form-control">
+      <select class="form-control" id="tipoProducto">
         <option>Peso</option>
         <option>Pieza</option>
       </select>
       <label>Costo:</label>
-      <input type="text" name="" class="form-control">
+      <input type="text" name="" class="form-control" id="costoProducto">
       <label>Precio:</label>
-      <input type="text" name="" class="form-control">
+      <input type="text" name="" class="form-control" id="precioProducto">
       <div class="text-right">
         <br>
-        <button type="submit" class="btn btn-outline-primary">
+        <button type="submit" class="btn btn-outline-primary" id="botonProducto">
           Agregar
         </button>
-        <button type="submit" class="btn btn-outline-success">
+        <!--<button type="submit" class="btn btn-outline-success">
               Guardar Cambios
-        </button>
+        </button>-->
       </div>
     </div>
   </form>
