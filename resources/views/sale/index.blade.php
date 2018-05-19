@@ -2,7 +2,7 @@
 
 @section('totalSales',$total_sales)
 
-@section('salesSum',$sales_sum)
+@section('salesSum',$sales_sum->Total)
 
 @section('gain',$total_sales)
 

@@ -14,7 +14,7 @@
         <h1 class="display-7">Total de categorias</h1>
       </div>
       <div class="content">
-        <h4 class="text-center"><b>@yield('productsSum')</b></h4>
+        <h4 class="text-center"><b>@yield('categoriesSum')</b></h4>
       </div>
     </div>
   </div>

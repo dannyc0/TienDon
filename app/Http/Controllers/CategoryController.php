@@ -12,9 +12,9 @@
 
     	$categorys=Categoria::all();
 
-    	$products_sum = 5;
+    	$categories_sum = Categoria::all()->count();
 
-      return View::make('category.index', compact('categorys','products_sum'));//,compact());
+      return View::make('category.index', compact('categorys','categories_sum'));//,compact());
     }
 
   }

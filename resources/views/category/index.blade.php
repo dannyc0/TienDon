@@ -1,6 +1,6 @@
 @extends('category.master')
 
-@section('productsSum',$products_sum)
+@section('categoriesSum',$categories_sum)
 
 @section('code')
     @foreach ($categorys as $category)
