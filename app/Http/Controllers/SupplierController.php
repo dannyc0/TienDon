@@ -9,7 +9,7 @@
   class SupplierController extends Controller{
 
     public function showSupplier(){
-      $suppliers_sum = 19;
+      $suppliers_sum = Proveedor::all()->count();
 
       $suppliers=Proveedor::all();
 
