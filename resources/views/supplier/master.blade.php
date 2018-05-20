@@ -3,21 +3,23 @@
 @section('pageTitle','Escritorio')
 
 @section('content')
-  <div class="card-container light-font">
-    <div class="summary-card secondary-color">
-      <div class="card-icon">
-        <i class="fas fa-hashtag fa-5x"></i>
-      </div>
-      <div class="card-content">
-        <div class="title">
-          <h1 class="display-7">Total de proveedores</h1>
+  @if (Auth::user()->role_id==1)
+    <div class="card-container light-font">
+      <div class="summary-card secondary-color">
+        <div class="card-icon">
+          <i class="fas fa-hashtag fa-5x"></i>
         </div>
-        <div class="content">
-          <h4 class="text-center"><b>@yield('supplierSum')</b></h4>
+        <div class="card-content">
+          <div class="title">
+            <h1 class="display-7">Total de proveedores</h1>
+          </div>
+          <div class="content">
+            <h4 class="text-center"><b>@yield('supplierSum')</b></h4>
+          </div>
         </div>
       </div>
     </div>
-  </div>
+  @endif
   <div class="contenedor">
     <form>
             <div class="form-group">

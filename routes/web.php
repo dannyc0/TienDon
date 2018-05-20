@@ -21,27 +21,27 @@ Route::get('/','Auth\LoginController@showLoginForm');
 
 //Route::get('login','LoginController@showLogin');
 
-Route::get('/home','DashboardController@showDashboard');
+Route::get('/home','DashboardController@showDashboard')->middleware('auth');
 
-Route::get('inventario','InventoryController@showInventory');
+Route::get('inventario','InventoryController@showInventory')->middleware('auth');
 
-Route::get('iniciarVenta','NewSaleController@showNewSale');
+Route::get('iniciarVenta','NewSaleController@showNewSale')->middleware('auth');
 
-Route::get('personalInfo','PersonalInfoController@showPersonalInfo');
+Route::get('personalInfo','PersonalInfoController@showPersonalInfo')->middleware('auth');
 
-Route::get('categorias','CategoryController@showCategory');
+Route::get('categorias','CategoryController@showCategory')->middleware('auth');
 
-Route::get('productos','ProductController@showProduct');
+Route::get('productos','ProductController@showProduct')->middleware('auth');
 
-Route::get('proveedores','SupplierController@showSupplier');
+Route::get('proveedores','SupplierController@showSupplier')->middleware('auth');
 
-Route::get('venta','SaleController@showSale');
+Route::get('venta','SaleController@showSale')->middleware('auth');
 
-Route::get('reportes','ReportsController@showReports');
+Route::get('reportes','ReportsController@showReports')->middleware('auth');
 
-Route::get('administrarUsuarios','ManageUsersController@showManagement');
+Route::get('administrarUsuarios','ManageUsersController@showManagement')->middleware('auth');
 
-Route::get('acercaDe','AboutController@showAbout');
+Route::get('acercaDe','AboutController@showAbout')->middleware('auth');
 
 Auth::routes();
 
