@@ -7,7 +7,7 @@
       </div>
     @endauth
     <a class="navbar-brand text-center" href="{{ url('/') }}">
-        <img src="img/nav_logo.png" alt="">
+        <img src="{{asset('img/nav_logo.png')}}" alt="">
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -21,10 +21,13 @@
                 <li><a class="nav-link" href="{{ route('login') }}">{{ __('Iniciar sesión') }}</a></li>
                 <li><a class="nav-link" href="{{ route('register') }}">{{ __('Registro') }}</a></li>
             @else
-              <li><a class="nav-link user-photo test" href=""><img src="" alt="foto"></a></li>
-              <li class="nav-item dropdown">
-                  <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                      {{ Auth::user()->name }} <span class="caret"></span>
+              <li class="nav-item dropdown text-center">
+                  <a id="navbarDropdown" class="nav-link" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                      <div class="user-photo">
+                        <img src="{{asset('img/user_default.png')}}">
+                        {{ Auth::user()->name }}
+                        <i class="fas fa-caret-down"></i>
+                      </div>
                   </a>
 
                   <div class="dropdown-menu" aria-labelledby="navbarDropdown">

@@ -39,6 +39,8 @@ Route::get('venta','SaleController@showSale')->middleware('auth');
 
 Route::get('reportes','ReportsController@showReports')->middleware('auth');
 
+Route::get('reporteGenerado','GeneratedReportController@showReport')->middleware('auth');
+
 Route::get('administrarUsuarios','ManageUsersController@showManagement')->middleware('auth');
 
 Route::get('acercaDe','AboutController@showAbout')->middleware('auth');

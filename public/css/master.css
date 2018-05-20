@@ -43,7 +43,7 @@
 }
 
 .navbar-brand img{
-  width: 45%;
+  width: 55%;
 }
 
 .toggle-menu-admin{
@@ -73,7 +73,7 @@
   width: 95px;
   position: fixed;
   z-index: 1;
-  top: 80px;
+  top: 70px;
   left: 0;
   overflow-x: hidden;
   overflow-y: auto;
@@ -166,10 +166,6 @@
   align-items: center;
   justify-content: space-between;
   margin: 10px;
-}
-
-.navbar-nav{
-  margin-right: 20%;
 }
 
 .navbar-brand{
@@ -321,10 +317,17 @@
 }
 /*Gus-Fin*/
 
+.nav-item.dropdown{
+  width: 45%;
+  margin-left: 50%;
+}
 .card{
   margin-top: 20%;
 }
-
-.user-photo{
-  border-radius: 50%;
+.user-photo img{
+  width: 10%;
+  display: inline;
+}
+.flex-item{
+  display: flex;
 }
