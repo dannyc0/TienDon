@@ -48,6 +48,9 @@ $("#search").on("keyup", function() {
 $("#nombreCategoria").focusout(function(){
 	if($("#chances").val()=="false"){
 		var randomNumber = Math.floor((Math.random() * 99) + 10);
+		if(randomNumber>100){
+			randomNumber-=10;
+		}
 		var firstLetters = document.getElementById("nombreCategoria").value;
 		var code = firstLetters.substring(0,4)+randomNumber;
 		$("#codigoCategoria").val(code);

@@ -34,7 +34,7 @@
         </div>
       </div>
       <div class="table-responsive">
-        <table class="table table-bordered">
+        <table class="table table-bordered table-fixed">
   				<thead class="thead-light">
     				<tr>
      			      <th style="width:15%">Código:</th>

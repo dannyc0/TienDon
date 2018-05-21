@@ -181,39 +181,37 @@
   border-radius: 10px;
   margin: 5% 0;
 }
-table {
+table,.table-fixed {
     width: 100%;
 }
 
-thead, tbody, tr, td, th {
+.table-fixed thead, .table-fixed tbody, .table-fixed tr, .table-fixed td, .table-fixed th {
   display: block;
-
 }
 
-tr:after {
+.table-fixed tr:after {
     content: ' ';
     display: block;
     visibility: hidden;
     clear: both;
 }
 
-thead th {
+.table-fixed thead th {
     height: 50px;
-
     /*text-align: left;*/
 }
 
-tbody {
+.table-fixed tbody {
     height: 150px;
     overflow-y: auto;
 }
 
-thead {
+.table-fixed thead {
     /* fallback */
 }
 
 
-tbody td, thead th {
+.table-fixed tbody td, .table-fixed thead th {
     float: left;
     height: 50px;
 }
