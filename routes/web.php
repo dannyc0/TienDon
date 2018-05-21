@@ -39,7 +39,13 @@ Route::get('venta','SaleController@showSale')->middleware('auth');
 
 Route::get('reportes','ReportsController@showReports')->middleware('auth');
 
-Route::get('reporteGenerado','GeneratedReportController@showReport')->middleware('auth');
+Route::get('reporteGenerado','ReportsController@pdf')->name('reporteGenerado')->middleware('auth');
+
+Route::get('reporteGeneradob','ReportsController@pdfCompra')->name('reporteGeneradob')->middleware('auth');
+
+Route::get('reporteGeneradoc','ReportsController@pdfInv')->name('reporteGeneradoc')->middleware('auth');
+
+//Route::get('reporteGenerado','GeneratedReportController@showReport')->middleware('auth');
 
 Route::get('administrarUsuarios','ManageUsersController@showManagement')->middleware('auth');
 
