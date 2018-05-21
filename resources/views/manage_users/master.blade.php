@@ -3,6 +3,7 @@
 @section('pageTitle','Escritorio')
 
 @section('content')
+@if (Auth::user()->role_id==1)
   <div class="card-container light-font">
     <div class="summary-card secondary-color">
       <div class="card-icon">
@@ -18,6 +19,7 @@
       </div>
     </div>
   </div>
+@endif
 <div class="contenedor">
   <form>
         <div class="form-group">

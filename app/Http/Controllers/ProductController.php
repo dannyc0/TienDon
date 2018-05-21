@@ -15,7 +15,7 @@
      
       //$products = array(array('LA002','Lácteos','Lala','Yomi Lala','200 ml','Pieza','$29','$50'));
 
-      $products_sum = 135;
+      $products_sum = Producto::all()->count();
 
       return View::make('products.index',compact('products','products_sum'));
 

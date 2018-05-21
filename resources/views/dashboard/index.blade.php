@@ -2,6 +2,6 @@
 
 @section('masVen',$masVen)	
 
-@section('ganDa',$ganDa)
+@section('ganDa',$ganDa->Ganancia)
 
 

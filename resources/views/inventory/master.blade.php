@@ -3,6 +3,7 @@
 @section('pageTitle','Inventario')
 
 @section('content')
+@if (Auth::user()->role_id==1)
 <div class="card-container light-font">
   <div class="summary-card secondary-color">
     <div class="card-icon">
@@ -31,6 +32,7 @@
     </div>
   </div>
 </div>
+@endif
 <div class="contenedor">
   <div class="col-md-12">
   <form>
@@ -45,14 +47,14 @@
             @yield('categories');
           </select><br>
         </div>
-        
+
             <div class="col-md-3 mb-3">
           <label>Producto:</label>
           <select class="form-control">
             @yield('products')
           </select><br>
         </div>
-       
+
             <div class="col-md-2 mb-3">
           <label>Cantidad:</label>
           <input type="text" class="form-control">
@@ -60,7 +62,7 @@
         <div class="col-md-1 mb-3">
             <br><br>
             <label id="piezaInventario">Pza.</label>
-            
+
           </div>
        <div class="col-md-3 mb-3 form-button3"><br>
             <button type="submit" class="btn btn-outline-primary">

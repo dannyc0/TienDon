@@ -4,7 +4,7 @@
 
 @section('salesSum',$sales_sum->Total)
 
-@section('gain',$total_sales)
+@section('gain',$gain->Ganancia)
 
 @section('rowData')
     @foreach ($seller_details as $element)
