@@ -41,38 +41,38 @@
     </div>
       <br>
       <div class="form-row">
-            <div class="col-md-3 mb-3">
-          <label>Categoría:</label>
-          <select class="form-control">
-            @yield('categories');
-          </select><br>
+        <div class="col-md-2 mb-3 text-right">
+          <label class="lead">Buscar:</label>
         </div>
-
-            <div class="col-md-3 mb-3">
-          <label>Producto:</label>
-          <select class="form-control">
-            @yield('products')
-          </select><br>
+        <div class="col-md-10 mb-3">
+          <input type="text" id="search" class="form-control" placeholder="Código de barras de producto">
         </div>
-
-            <div class="col-md-2 mb-3">
-          <label>Cantidad:</label>
+      </div>
+      <div class="form-row">
+        <div class="col-md-2 mb-3 text-right">
+          <label class="lead">Producto:</label>
+        </div>
+        <div class="col-md-3 mb-3">
+          <input type="text" id="idProduct" class="form-control" readonly>
+        </div>
+        <div class="col-md-2 mb-3 text-right">
+          <label class="lead">Cantidad:</label>
+        </div>
+        <div class="col-md-2 mb-3">
           <input type="text" class="form-control">
         </div>
         <div class="col-md-1 mb-3">
-            <br><br>
-            <label id="piezaInventario">Pza.</label>
-
-          </div>
-       <div class="col-md-3 mb-3 form-button3"><br>
-            <button type="submit" class="btn btn-outline-primary">
-              Agregar
-            </button>
-          </div>
+          <label class="lead" id="piezaInventario">Pieza</label>
         </div>
-        </form>
+        <div class="col-md-2 mb-3 form-button3"><br>
+          <button type="submit" class="btn btn-outline-primary">
+            Agregar
+          </button>
+        </div>
       </div>
-    </div>
+  </form>
+</div>
+</div>
 
     <div class="contenedor ">
           <div class="form-group">

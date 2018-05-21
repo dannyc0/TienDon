@@ -30,7 +30,7 @@
           <label class="lead">Buscar:</label>
         </div>
         <div class="col-md-10 mb-3">
-          <input type="text" id="search" class="form-control" placeholder="Ej. Surtido de galletas, galletas, Gall01 ">
+          <input type="text" id="search" class="form-control" placeholder="Ej. Surtido de galletas, Galletas, Gall01 ">
         </div>
       </div>
       <div class="table-responsive">
@@ -61,9 +61,9 @@
       <label>Código:</label>
       <input type="text" name="id" class="form-control" readonly="" id="codigoCategoria" required><br>
       <label>Nombre:</label>
-      <input type="text" class="form-control" pattern="[a-zA-Z][a-zA-Z ]{3,}" title="Al menos 3 caracteres, sin acentos" id="nombreCategoria" name="nombre_categoria" required><br>
+      <input type="text" class="form-control" pattern="[a-zA-Z][a-zA-Z ]{3,}" title="Al menos 4 caracteres, sin acentos" id="nombreCategoria" name="nombre_categoria" required><br>
       <label>Descripción:</label>
-      <input type="text" name="descripcion_categoria" class="form-control" id="descripcionCategoria">
+      <input type="text" name="descripcion_categoria" class="form-control" id="descripcionCategoria" required>
       <div class="text-right">
         <br>
         <button type="submit" class="btn btn-outline-primary" id="buttonAdd">Agregar</button>

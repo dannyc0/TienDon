@@ -7,7 +7,7 @@
 
 @section('categories')
     @foreach ($categories as $categorie)
-      <option>{{$categorie['id_categoria']}}</option>
+      <option>{{$categorie['id']}}</option>
     @endforeach
 @endsection
 
@@ -16,4 +16,3 @@
       <option>{{$product['nombre_producto']}}</option>
     @endforeach
 @endsection
-
