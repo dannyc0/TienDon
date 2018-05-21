@@ -26,32 +26,15 @@
       <h3>Buscar Producto</h3>
       <br>
       <div class="form-row">
-            <label>Filtrar por:</label>
-            </div>
-            <div class="form-row">
-            <div class="col-md-3 mb-3">
-              <label>Código:</label>
-            <select class="form-control">
-                @yield('code')
-            </select>
-          </div >
-          <div class="col-md-3 mb-3">
-            <label>Nombre:</label>
-            <select class="form-control">
-                @yield('name')
-            </select>
-          </div>
-      <div class="col-md-3 mb-3">
-        <br>
-        <div class="col-md-3 mb-3 text-center form-button2">
-            <button type="submit" class="btn btn-outline-primary">
-              Buscar
-            </button>
-          </div>
+         <div class="col-md-2 mb-3 text-right">
+            <label class="lead">Buscar:</label>
+        </div>
+        <div class="col-md-10 mb-3">
+          <input type="text" id="search" class="form-control" placeholder="Ej. Ruflles Queso, Bota01, 750101111 ">
+        </div>
       </div>
-    </div>
       <div class="table-responsive">
-        <table class="table table-bordered">
+        <table class="table table-bordered table-fixed">
   				<thead class="thead-light">
     				<tr>
      			      <th>Código:</th>
@@ -62,21 +45,11 @@
                 <th>Tipo:</th>
                 <th>Costo:</th>
                 <th>Precio:</th>
-      					<th></th>
+      					<th>Acciones</th>
     				</tr>
  				 </thead>
   			 <tbody>
-    				<tr>
               @yield('rowData')
-      				<td>
-                <button type="submit" class="btn btn-outline-success">
-                      Actualizar
-                </button>
-                <button type="submit" class="btn btn-outline-danger">
-                      Eliminar
-                </button>
-              </td>
-            </tr>
           </tbody>
         </table>
       </div>

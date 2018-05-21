@@ -26,31 +26,13 @@
               <h3>Buscar Proveedor</h3>
               <br>
               <div class="form-row">
-            <br>
-            <label>Filtrar por:</label>
+                <div class="col-md-2 mb-3 text-right">
+                  <label class="lead">Buscar:</label>
+                </div>
+                <div class="col-md-10 mb-3">
+                   <input type="text" id="search" class="form-control" placeholder="Ej. Marl01, Marlboro, 02098507">
+                </div>
             </div>
-            <div class="form-row">
-            <div class="col-md-3 mb-3">
-              <label>Código:</label>
-            <select class="form-control">
-                @yield('code')
-            </select>
-          </div >
-          <div class="col-md-3 mb-3">
-            <label>Nombre:</label>
-            <select class="form-control">
-                @yield('name')
-            </select>
-          </div>
-      <div class="col-md-3 mb-3">
-        <br>
-        <div class="col-md-3 mb-3 text-center form-button2">
-            <button type="submit" class="btn btn-outline-primary">
-              Buscar
-            </button>
-          </div>
-      </div>
-    </div>
             <div class="table-responsive">
               <table class="table table-bordered">
   				        <thead class="thead-light">
@@ -63,17 +45,7 @@
     				          </tr>
  				         </thead>
   			         <tbody>
-    				         <tr>
       					         @yield('rowData')
-      					         <td>
-                          <center><button type="submit" class="btn btn-outline-success">
-                             Actualizar
-                          </button>
-                          <button type="submit" class="btn btn-outline-danger">
-                             Eliminar
-                           </button></center>
-                         </td>
-                        </tr>
                 </tbody>
               </table>
             </div>
