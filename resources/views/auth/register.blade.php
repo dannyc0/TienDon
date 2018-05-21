@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Registro') }}</div>
+                <center><div class="card-header"><h2>{{ __('Registrate Aquí') }}</h2></div></center>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">
@@ -80,6 +80,7 @@
                                 @endif
                             </div>
                         </div>
+                        <center><h6> Contraseña mínimo 1 caracter especial, 1 mayúscula y 1 número.</h6></center>
 
                         <div class="form-group row">
                             <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirmar contraseña') }}</label>
@@ -91,9 +92,9 @@
 
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
+                               <div align="right"><button type="submit" class="bttn btn-primary">
                                     {{ __('Registrar') }}
-                                </button>
+                                </button></center>
                             </div>
                         </div>
                     </form>

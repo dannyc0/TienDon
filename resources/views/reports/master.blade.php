@@ -3,6 +3,8 @@
 @section('pageTitle','Reportes')
 
 @section('content')
+
+
    <div class="contenedor">
     <form>
             <div class="form-group">
@@ -48,14 +50,31 @@
                      <tr>
                          @yield('rowData')
                          <td>
-                          <center><button type="submit" class="btn btn-outline-success">
-                             Ver Reporte
-                          </button>
+                          <center><a href="{{ route('reporteGenerado')}}" class="btn btn-outline-success"> Descargar </a>
                           <button type="submit" class="btn btn-outline-danger">
                              Eliminar
                            </button></center>
                          </td>
                         </tr>
+                        <tr>
+                         @yield('rowData2')
+                         <td>
+                          <center><a href="{{ route('reporteGeneradob')}}" class="btn btn-outline-success"> Descargar </a>
+                          <button type="submit" class="btn btn-outline-danger">
+                             Eliminar
+                           </button></center>
+                         </td>
+                        </tr>
+                        <tr>
+                         @yield('rowData3')
+                         <td>
+                          <center><a href="{{ route('reporteGeneradoc')}}" class="btn btn-outline-success"> Descargar </a>
+                          <button type="submit" class="btn btn-outline-danger">
+                             Eliminar
+                           </button></center>
+                         </td>
+                        </tr>
+
                 </tbody>
               </table>
             </div>

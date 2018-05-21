@@ -11,7 +11,7 @@
        <center> <img src="{{asset('img/tiendon_logo.png')}}" alt="" height="120" width="200"></center>
        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       </div>
-      <h1 class="page-header">Reporte de Ventas</h1>
+      <h1 class="page-header">Reporte de Inventario</h1>
       <div id="project">
         <div><span>Fecha:</span>{{$date}}</div>
         <div>Miscelanea "El Don"</div>
@@ -30,17 +30,19 @@
          <table class="table table-hover table-striped">
         <thead>
             <tr>     
-                <th>Fecha y hora:</th>
+                <th>Codigo:</th>
                 <th>Producto:</th>
-                <th>Cantidad Vendida:</th>
+                <th>Presentación:</th>
+                <th>Cantidad:</th>
             </tr>                            
         </thead>
         <tbody>
-            @foreach($ventas as $venta)
+            @foreach($products as $product)
             <tr>
-              <td> {{$venta->venta_id_venta}} </td>    
-              <td> {{$venta->producto_id_producto}} </td>
-              <td> {{$venta->cantidad_venta}} </td>
+              <td> {{$product->id_producto}} </td>    
+              <td> {{$product->nombre_producto}} </td>
+              <td> {{$product->presentacion_producto}} </td>
+              <td> {{$product->cantidad_producto}}</td>
             </tr>
             @endforeach
         </tbody>
@@ -49,6 +51,3 @@
 </main>
 </body>
 </html>
-
-    
-
