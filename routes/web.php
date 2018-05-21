@@ -29,7 +29,9 @@ Route::get('iniciarVenta','NewSaleController@showNewSale')->middleware('auth');
 
 Route::get('personalInfo','PersonalInfoController@showPersonalInfo')->middleware('auth');
 
-Route::get('categorias','CategoryController@showCategory')->middleware('auth');
+//Route::get('categorias','CategoryController@showCategory')->middleware('auth');
+Route::resource('categorias','CategoryController')->middleware('auth');
+Route::get('category/{id}', 'CategoryController@getAjaxData');
 
 Route::get('productos','ProductController@showProduct')->middleware('auth');
 

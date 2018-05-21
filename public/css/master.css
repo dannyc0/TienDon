@@ -73,7 +73,7 @@
   width: 95px;
   position: fixed;
   z-index: 1;
-  top: 70px;
+  top: 60px;
   left: 0;
   overflow-x: hidden;
   overflow-y: auto;
@@ -175,14 +175,47 @@
 /*liz*/
 .contenedor{
   width: 100%;
-  padding: 50px;
+  padding: 30px 50px;
   background-color:white;
   border: 2px solid #399bff;
   border-radius: 10px;
   margin: 5% 0;
 }
-.table{
-  width: 100% !important;
+table {
+    width: 100%;
+}
+
+thead, tbody, tr, td, th {
+  display: block;
+
+}
+
+tr:after {
+    content: ' ';
+    display: block;
+    visibility: hidden;
+    clear: both;
+}
+
+thead th {
+    height: 50px;
+
+    /*text-align: left;*/
+}
+
+tbody {
+    height: 150px;
+    overflow-y: auto;
+}
+
+thead {
+    /* fallback */
+}
+
+
+tbody td, thead th {
+    float: left;
+    height: 50px;
 }
 
 .form-button{

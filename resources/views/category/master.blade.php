@@ -3,6 +3,7 @@
 @section('pageTitle','Escritorio')
 
 @section('content')
+@yield('message')
 @if (Auth::user()->role_id==1)
   <div class="card-container light-font">
     <div class="summary-card secondary-color">
@@ -21,84 +22,56 @@
   </div>
 @endif
 <div class="contenedor">
-  <form>
     <div class="form-group">
       <h3>Buscar Categoría</h3>
       <br>
       <div class="form-row">
-            <label>Filtrar por:</label>
-            </div>
-            <div class="form-row">
-            <div class="col-md-3 mb-3">
-              <label>Código:</label>
-            <select class="form-control">
-                @yield('code')
-            </select>
-          </div >
-          <div class="col-md-3 mb-3">
-            <label>Nombre:</label>
-            <select class="form-control">
-                @yield('name')
-            </select>
-          </div>
-      <div class="col-md-3 mb-3">
-        <br>
-        <div class="col-md-3 mb-3 text-center form-button2">
-            <button type="submit" class="btn btn-outline-primary">
-              Buscar
-            </button>
-          </div>
+        <div class="col-md-2 mb-3 text-right">
+          <label class="lead">Buscar:</label>
+        </div>
+        <div class="col-md-10 mb-3">
+          <input type="text" id="search" class="form-control" placeholder="Ej. Surtido de galletas, galletas, Gall01 ">
+        </div>
       </div>
-    </div>
       <div class="table-responsive">
         <table class="table table-bordered">
   				<thead class="thead-light">
     				<tr>
-     			      <th>Código:</th>
-     					  <th>Nombre:</th>
-      				  <th>Descripción:</th>
-      					<th></th>
+     			      <th style="width:15%">Código:</th>
+     					  <th style="width:25%">Nombre:</th>
+      				  <th style="width:40%">Descripción:</th>
+      					<th style="width:20%">Acciones</th>
     				</tr>
  				 </thead>
   			 <tbody>
-    				<tr>
-              @yield('rowData')
-      				<td>
-                <button type="submit" class="btn btn-outline-success">
-                      Actualizar
-                </button>
-                <button type="submit" class="btn btn-outline-danger">
-                      Eliminar
-                </button>
-              </td>
-            </tr>
-          </tbody>
+            @yield('rowData')
+         </tbody>
         </table>
       </div>
     </div>
-  </form>
 </div>
-<div class="contenedor">
-  <form>
+<div class="contenedor" id="formCard">
+  {{-- {{ route('categorias.store') }} --}}
+  <form action="{{ route('categorias.store') }}" method="post" id="formy">
     <div class="form-group">
-      <h3>Nueva Categoría</h3>
+      <h3 id="titleForm">Nueva Categoría</h3>
       <br>
+      <input type="text" id="chances" value="false" style="display:none">
+      <input type="text" id="reqType" name="reqType" value="add" style="display:none">
       <label>Código:</label>
-      <input type="text" name="" class="form-control" readonly="" id="codigoCategoria">
+      <input type="text" name="id" class="form-control" readonly="" id="codigoCategoria" required><br>
       <label>Nombre:</label>
-      <input type="text" class="form-control" id="nombreCategoria">
+      <input type="text" class="form-control" pattern="[a-zA-Z][a-zA-Z ]{3,}" title="Al menos 3 caracteres, sin acentos" id="nombreCategoria" name="nombre_categoria" required><br>
       <label>Descripción:</label>
-      <input type="text" name="" class="form-control" id="descripcionCategoria">
+      <input type="text" name="descripcion_categoria" class="form-control" id="descripcionCategoria">
       <div class="text-right">
         <br>
-        <button type="submit" class="btn btn-outline-primary" id="botonCategoria">
-          Agregar
-        </button>
-        <!--<button type="submit" class="btn btn-outline-success">
-              Guardar Cambios
-        </button>-->
+        <button type="submit" class="btn btn-outline-primary" id="buttonAdd">Agregar</button>
+        <button id="buttonUpdate" style="display:none" class='btn btn-outline-success' type="submit">Actualizar</button>
+        <button class='btn btn-outline-primary' onclick='newForm()' id="buttonNew" type='button' style="display:none">Nuevo</button>
       </div>
     </div>
+    @csrf
   </form>
 </div>
 @endsection
