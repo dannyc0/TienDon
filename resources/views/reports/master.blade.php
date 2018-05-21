@@ -8,7 +8,7 @@
    <div class="contenedor">
     <form>
             <div class="form-group">
-              <h3>Reportes:</h3>
+              <h3>Reporte:</h3>
               <br>
               <div class="form-row">
             <br>
