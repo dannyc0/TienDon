@@ -23,25 +23,27 @@
 
     public function pdf(){
 
+    	$date= date('Y-m-d');
     	$ventas=DetalleVenta::all();
     	$products=Producto::all();
-    	$pdf = PDF::loadView('reports.generated', compact('products','ventas'));
+    	$pdf = PDF::loadView('reports.generated', compact('products','ventas', 'date'));
 
         return $pdf->download('venta.pdf');
 
     }
     public function pdfCompra(){
+    	$date= date('Y-m-d');
     	$compras=DetalleCompra::all();
     	$products=Producto::all();
-    	$pdf = PDF::loadView('reports.generatedb', compact('products','compras'));
+    	$pdf = PDF::loadView('reports.generatedb', compact('products','compras','date'));
 
     	return $pdf->download('compra.pdf');
     }
 
      public function pdfInv(){
- 
+ 		$date= date('Y-m-d');
     	$products=Producto::all();
-    	$pdf = PDF::loadView('reports.generatedc', compact('products'));
+    	$pdf = PDF::loadView('reports.generatedc', compact('products','date'));
 
     	return $pdf->download('inventario.pdf');
     }

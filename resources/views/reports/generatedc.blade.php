@@ -13,13 +13,11 @@
       </div>
       <h1 class="page-header">Reporte de Inventario</h1>
       <div id="project">
-        $now = new Date();
-        <div><span>Fecha:</span> Mayo 25, 2018</div>
+        <div><span>Fecha:</span>{{$date}}</div>
         <div>Miscelanea "El Don"</div>
         <div>Calle Sauces #376<br /> Col. Paseos de Cuautitlán, Cuautitlán, Edo. Mex.</div>
         <div>CP. 54807 </div>
         <br>
-
       </div>
       <br>
       <br>

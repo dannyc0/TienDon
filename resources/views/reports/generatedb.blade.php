@@ -13,7 +13,7 @@
       </div>
       <h1 class="page-header">Reporte de Compras</h1>
       <div id="project">
-        <div><span>Fecha:</span> Mayo 25, 2018</div>
+        <div><span>Fecha:</span>{{$date}}</div>
         <div>Miscelanea "El Don"</div>
         <div>Calle Sauces #376<br /> Col. Paseos de Cuautitlán, Cuautitlán, Edo. Mex.</div>
         <div>CP. 54807 </div>
