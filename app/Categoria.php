@@ -13,4 +13,5 @@ class Categoria extends Model
      * @var string
      */
     protected $table = 'categoria';
+    public $incrementing=false;
 }
