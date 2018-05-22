@@ -10,10 +10,7 @@
 
     public function index(){
       $suppliers_sum = Proveedor::all()->count();
-
       $suppliers=Proveedor::all();
-
-      //$suppliers = array(array('AS001','Gamesa','5515826822','X'));
       return View::make('supplier.index',compact('suppliers','suppliers_sum'));
     }
 
