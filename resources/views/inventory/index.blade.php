@@ -8,7 +8,7 @@
   @endif
 @endsection
 
-@section('productsSum',$products_sum)
+@section('productsSum',$products_sum->Total)
 
 @section('inventoryValue',$inventory_value->Total)
 

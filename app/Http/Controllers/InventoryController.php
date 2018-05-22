@@ -13,9 +13,12 @@
     public function index(){
       $inventory = Producto::all();
 
-      $products_sum = Producto::all()->count();
+      //$products_sum = Producto::all()->count();
+      $products_sum=DB::table('producto')
+      ->select(DB::raw('SUM(cantidad_producto) as Total'))
+      ->first();
       $inventory_value = DB::table('producto')
-      ->select(DB::raw('SUM(costo_producto) as Total'))
+      ->select(DB::raw('SUM(costo_producto*cantidad_producto) as Total'))
       ->first();
 
       return View::make('inventory.index',compact('products_sum','inventory_value','inventory'));
