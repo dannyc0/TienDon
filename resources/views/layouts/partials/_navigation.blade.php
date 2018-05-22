@@ -1,5 +1,7 @@
 <div class="sidenav primary-color light-font">
-  <a href="{{url('home')}}" id="home"><div class="icon-nav"><i class="fas fa-home fa-2x"></i></div><div class="text-nav">Escritorio</div></a>
+  @if (Auth::user()->role_id==1)
+    <a href="{{url('home')}}" id="home"><div class="icon-nav"><i class="fas fa-home fa-2x"></i></div><div class="text-nav">Escritorio</div></a>
+  @endif
   <a href="{{url('iniciarVenta')}}" id="iniciarVenta"><div class="icon-nav"><i class="fab fa-opencart fa-2x"></i></div><div class="text-nav">Iniciar venta</div></a>
   <a href="{{ route('categorias.index') }}" id="categorias"><div class="icon-nav"><i class="fas fa-cube fa-2x"></i></div><div class="text-nav">Categorias</div></a>
   <a href="{{url('inventario')}}" id="inventario"><div class="icon-nav"><i class="fas fa-box-open fa-2x"></i></div><div class="text-nav">Inventario</div></a>
