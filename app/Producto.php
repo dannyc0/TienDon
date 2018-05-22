@@ -13,4 +13,5 @@ class Producto extends Model
      * @var string
      */
     protected $table = 'producto';
+    public $incrementing=false;
 }

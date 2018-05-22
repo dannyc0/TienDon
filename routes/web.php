@@ -23,13 +23,13 @@ Route::get('/','Auth\LoginController@showLoginForm');
 
 Route::get('/home','DashboardController@showDashboard')->middleware('auth');
 
-Route::get('inventario','InventoryController@showInventory')->middleware('auth');
+Route::resource('inventario','InventoryController')->middleware('auth');
+Route::get('inventory/{id}', 'InventoryController@getAjaxData');
 
 Route::get('iniciarVenta','NewSaleController@showNewSale')->middleware('auth');
 
 Route::get('personalInfo','PersonalInfoController@showPersonalInfo')->middleware('auth');
 
-//Route::get('categorias','CategoryController@showCategory')->middleware('auth');
 Route::resource('categorias','CategoryController')->middleware('auth');
 Route::get('category/{id}', 'CategoryController@getAjaxData');
 

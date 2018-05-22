@@ -45,6 +45,34 @@ $("#search").on("keyup", function() {
 	});
 });
 
+$("#searchProduct").on("keyup", function() {
+	// alert($(this).val());
+	var id = $(this).val();
+	$.ajax({
+		method: 'get',
+		url: 'inventory/' + id,
+		dataType: "json",
+		success: function(data){
+			 $("#productName").val(data.nombre+" "+data.presentacion);
+			 if(data.tipo == 'Pieza'){
+			 		$("#productType").text("pieza(s)");
+			 }else if(data.tipo == 'Peso'){
+				 	$("#productType").text("kgs");
+			 }
+		},
+		error: function(e, xhr){
+			 $("#productName").val("");
+			 $("#productType").text("");
+		},
+		statusCode: {
+				500: function() {
+				},
+				422: function(data) {
+				}
+		}
+	});
+});
+
 $("#nombreCategoria").focusout(function(){
 	if($("#chances").val()=="false"){
 		var randomNumber = Math.floor((Math.random() * 99) + 10);
