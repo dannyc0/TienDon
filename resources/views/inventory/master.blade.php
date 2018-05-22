@@ -47,7 +47,7 @@
           <label class="lead">Buscar:</label>
         </div>
         <div class="col-md-10 mb-3">
-          <input type="text" name="id" id="searchProduct" class="form-control" placeholder="Código de barras de producto">
+          <input type="text" name="id" id="searchProduct" class="form-control" placeholder="Código de barras de producto" required>
         </div>
       </div>
       <div class="form-row">
@@ -55,7 +55,7 @@
           <label class="lead">Producto:</label>
         </div>
         <div class="col-md-3 mb-3">
-          <input type="text" name="name" id="productName" class="form-control" readonly>
+          <input type="text" name="name" id="productName" class="form-control" readonly required>
         </div>
         <div class="col-md-2 mb-3 text-right">
           <label class="lead">Cantidad:</label>
