@@ -61,7 +61,7 @@
           <label class="lead">Cantidad:</label>
         </div>
         <div class="col-md-2 mb-3">
-          <input type="text" name="quantity" class="form-control">
+          <input type="text" name="quantity" class="form-control" required>
         </div>
         <div class="col-md-1 mb-3">
           <label class="lead" id="productType"></label>
