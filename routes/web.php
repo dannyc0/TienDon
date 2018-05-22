@@ -36,7 +36,9 @@ Route::get('category/{id}', 'CategoryController@getAjaxData');
 Route::resource('productos','ProductController')->middleware('auth');
 Route::get('product/{id}', 'ProductController@getAjaxData');
 
-Route::get('proveedores','SupplierController@showSupplier')->middleware('auth');
+// Route::get('proveedores','SupplierController@showSupplier')->middleware('auth');
+Route::resource('proveedores','SupplierController')->middleware('auth');
+Route::get('supplier/{id}', 'SupplierController@getAjaxData');
 
 Route::get('venta','SaleController@showSale')->middleware('auth');
 

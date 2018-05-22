@@ -44,8 +44,8 @@ $("#search").on("keyup", function() {
     }
 	});
 });
-
-$("#searchProduct").on("keyup", function() {
+//$("#searchProduct").on("keyup", function() {
+$('#searchProduct').bind('input', function() {
 	var id = $(this).val();
 	$.ajax({
 		method: 'get',

@@ -22,37 +22,36 @@
     </div>
   @endif
   <div class="contenedor">
-    <form>
-            <div class="form-group">
-              <h3>Buscar Proveedor</h3>
-              <br>
-              <div class="form-row">
-                <div class="col-md-2 mb-3 text-right">
-                  <label class="lead">Buscar:</label>
-                </div>
-                <div class="col-md-10 mb-3">
-                   <input type="text" id="search" class="form-control" placeholder="Ej. Marl01, Marlboro, 02098507">
-                </div>
-            </div>
-            <div class="table-responsive">
-              <table class="table table-bordered">
-  				        <thead class="thead-light">
-    				          <tr>
-     					            <th>Código:</th>
-     					            <th>Nombre:</th>
-      					          <th>Teléfono:</th>
-                          <th>Logotipo:</th>
-      					         <th></th>
-    				          </tr>
- 				         </thead>
-  			         <tbody>
-      					         @yield('rowData')
-                </tbody>
-              </table>
-            </div>
-             </div>
-         </form>
-      </div>
+    <form action="{{ route('categorias.store') }}" method="post">
+        <div class="form-group">
+          <h3>Buscar Proveedor</h3>
+          <br>
+          <div class="form-row">
+              <div class="col-md-2 mb-3 text-right">
+                <label class="lead">Buscar:</label>
+              </div>
+              <div class="col-md-10 mb-3">
+                 <input type="text" id="search" class="form-control" placeholder="Ej. Marl01, Marlboro, 02098507">
+              </div>
+          </div>
+          <div class="table-responsive">
+            <table class="table table-bordered table-fixed">
+				        <thead class="thead-light">
+  				          <tr>
+   					            <th style="width:20%">Código:</th>
+   					            <th style="width:30%">Nombre:</th>
+    					          <th style="width:30%">Teléfono:</th>
+    					          <th style="width:20%">Acciones</th>
+  				          </tr>
+				         </thead>
+			         <tbody>
+    					    @yield('rowData')
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </form>
+    </div>
   <div class="contenedor">
   <form>
           <div class="form-group">
