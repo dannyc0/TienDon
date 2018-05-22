@@ -14,7 +14,7 @@
     public function showDashboard(){
 
     	 $ganDa =  DB::table('producto')
-      ->join('detalle_venta','producto.id_producto','=','detalle_venta.producto_id_producto')
+      ->join('detalle_venta','producto.id','=','detalle_venta.producto_id_producto')
       ->select(DB::raw('SUM((precio_producto-costo_producto)*cantidad_venta) as Ganancia'))
       ->first();
     	 $masVen = "CocaCola600ml";

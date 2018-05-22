@@ -3,6 +3,7 @@
 @section('pageTitle','Escritorio')
 
 @section('content')
+  @yield('message')
   @if (Auth::user()->role_id==1)
     <div class="card-container light-font">
       <div class="summary-card secondary-color">
