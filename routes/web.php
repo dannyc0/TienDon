@@ -33,7 +33,8 @@ Route::get('personalInfo','PersonalInfoController@showPersonalInfo')->middleware
 Route::resource('categorias','CategoryController')->middleware('auth');
 Route::get('category/{id}', 'CategoryController@getAjaxData');
 
-Route::get('productos','ProductController@showProduct')->middleware('auth');
+Route::resource('productos','ProductController')->middleware('auth');
+Route::get('product/{id}', 'ProductController@getAjaxData');
 
 Route::get('proveedores','SupplierController@showSupplier')->middleware('auth');
 

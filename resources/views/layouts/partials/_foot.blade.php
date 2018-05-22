@@ -46,7 +46,6 @@ $("#search").on("keyup", function() {
 });
 
 $("#searchProduct").on("keyup", function() {
-	// alert($(this).val());
 	var id = $(this).val();
 	$.ajax({
 		method: 'get',
@@ -112,6 +111,31 @@ function updateRequest(txt,id){
 		});
 		$("#chances").val('true');
 	}
+
+	if(txt=="Producto"){
+		$("#codigoProducto").prop("readonly",true);
+		$.ajax({
+			method: 'get',
+			url: 'product/' + id,
+			dataType: "json",
+			success: function(data){
+					$("#codigoProducto").val(data.myid);
+					$("#categoriaProducto").val(data.categoria);
+					$("#marcaProducto").val(data.marca);
+					$("#nombreProducto").val(data.nombre);
+					$("#presentacionProducto").val(data.presentacion);
+					$("#tipoProducto").val(data.tipo);
+					$("#costoProducto").val(data.costo);
+					$("#precioProducto").val(data.precio);
+			},
+			statusCode: {
+					500: function() {
+					},
+					422: function(data) {
+					}
+			}
+		});
+	}
 }
 
 $('#buttonNew').click(function(){
@@ -123,10 +147,22 @@ $('#buttonNew').click(function(){
 		$("#nombreCategoria").val("");
 		$("#descripcionCategoria").val("");
 		$("#chances").val('false');
-		$("#buttonForm").text("Agregar");
 		$("#titleForm").text("Nueva Categoría");
-		$("#reqType").val("add");
 	}
+	if($("#titleForm").text()=="Actualizar Producto") {
+		$("#codigoProducto").prop("readonly",false);
+		$("#codigoProducto").val("");
+		$("#categoriaProducto").val("");
+		$("#marcaProducto").val("");
+		$("#nombreProducto").val("");
+		$("#presentacionProducto").val("");
+		$("#tipoProducto").val("");
+		$("#costoProducto").val("");
+		$("#precioProducto").val("");
+		$("#titleForm").text("Nuevo Producto");
+	}
+	$("#buttonForm").text("Agregar");
+	$("#reqType").val("add");
 });
 
 $('#buttonUpdate').click(function(){

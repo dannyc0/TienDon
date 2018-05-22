@@ -13,4 +13,5 @@ class Proveedor extends Model
      * @var string
      */
     protected $table = 'proveedor';
+    public $incrementing=false;
 }

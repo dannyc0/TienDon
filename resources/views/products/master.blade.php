@@ -3,6 +3,7 @@
 @section('pageTitle','Escritorio')
 
 @section('content')
+@yield('message')
 @if (Auth::user()->role_id==1)
   <div class="card-container light-font">
     <div class="summary-card secondary-color">
@@ -37,15 +38,14 @@
         <table class="table table-bordered table-fixed">
   				<thead class="thead-light">
     				<tr>
-     			      <th>Código:</th>
-     					  <th>Categoría:</th>
-      				  <th>Marca:</th>
-                <th>Nombre:</th>
-                <th>Presentación:</th>
-                <th>Tipo:</th>
-                <th>Costo:</th>
-                <th>Precio:</th>
-      					<th>Acciones</th>
+     			      <th style="width:15%">Código:</th>
+     					  <th style="width:10%">Categoría:</th>
+      				  <th style="width:10%">Marca:</th>
+                <th style="width:15%">Nombre:</th>
+                <th style="width:15%">Presentación:</th>
+                <th style="width:10%">Costo:</th>
+                <th style="width:10%">Precio:</th>
+      					<th style="width:15%">Acciones</th>
     				</tr>
  				 </thead>
   			 <tbody>
@@ -56,44 +56,52 @@
     </div>
   </form>
 </div>
-<div class="contenedor">
-  <form>
+<div class="contenedor" id="formCard">
+  <form action="{{ route('productos.store') }}" method="post" id="formy">
     <div class="form-group">
-      <h3>Nuevo Producto</h3>
+      <h3 id="titleForm">Nuevo Producto</h3>
       <br>
-      <label id="codigoProducto">Código:</label>
-      <input type="text" name="" class="form-control">
+      <input type="text" id="reqType" name="reqType" value="add" style="display:none">
+
+      <label>Código:</label>
+      <input type="text" name="id" class="form-control" id="codigoProducto" pattern="[0-9]{9,13}" title="Sólo puedes ingresar números" required>
+
       <label>Categoría:</label>
-      <select class="form-control id" id="categoriaProducto">
+      <select class="form-control" name="category" id="categoriaProducto" required>
         @yield('categories')
       </select>
+
       <label>Marca:</label>
-      <select class="form-control" id="marcaProducto">
+      <select class="form-control" name="supplier" id="marcaProducto" required>
         @yield('brands')
       </select>
+
       <label>Nombre:</label>
-      <input type="text" class="form-control" id="nombreProducto">
+      <input type="text" class="form-control" name="name" id="nombreProducto" required>
+
       <label>Presentación:</label>
-      <input type="text" name="" class="form-control" id="presentacionProducto">
+      <input type="text" name="presentation" class="form-control" id="presentacionProducto" required>
+
       <label>Tipo de Producto:</label>
-      <select class="form-control" id="tipoProducto">
+      <select class="form-control" name="type" id="tipoProducto" required>
         <option>Peso</option>
         <option>Pieza</option>
       </select>
+
       <label>Costo:</label>
-      <input type="text" name="" class="form-control" id="costoProducto">
+      <input type="text" name="cost" class="form-control" id="costoProducto" pattern="[0-9]{,5}" title="Sólo puedes ingresar números" required>
+
       <label>Precio:</label>
-      <input type="text" name="" class="form-control" id="precioProducto">
+      <input type="text" name="price" class="form-control" id="precioProducto" pattern="[0-9]{,5}" title="Sólo puedes ingresar números" required>
+
       <div class="text-right">
         <br>
-        <button type="submit" class="btn btn-outline-primary" id="botonProducto">
-          Agregar
-        </button>
-        <!--<button type="submit" class="btn btn-outline-success">
-              Guardar Cambios
-        </button>-->
+        <button type="submit" class="btn btn-outline-primary" id="buttonAdd">Agregar</button>
+        <button id="buttonUpdate" style="display:none" class='btn btn-outline-success' type="submit">Actualizar</button>
+        <button class='btn btn-outline-primary' onclick='newForm()' id="buttonNew" type='button' style="display:none">Nuevo</button>
       </div>
     </div>
+    @csrf
   </form>
 </div>
 @endsection

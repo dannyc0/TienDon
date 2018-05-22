@@ -51,7 +51,6 @@
     </div>
 </div>
 <div class="contenedor" id="formCard">
-  {{-- {{ route('categorias.store') }} --}}
   <form action="{{ route('categorias.store') }}" method="post" id="formy">
     <div class="form-group">
       <h3 id="titleForm">Nueva Categoría</h3>
