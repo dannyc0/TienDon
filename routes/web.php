@@ -37,7 +37,7 @@ Route::get('category/{id}', 'CategoryController@getAjaxData');
 Route::resource('productos','ProductController')->middleware('auth');
 Route::get('product/{id}', 'ProductController@getAjaxData');
 
-// Route::get('proveedores','SupplierController@showSupplier')->middleware('auth');
+
 Route::resource('proveedores','SupplierController')->middleware('auth');
 Route::get('supplier/{id}', 'SupplierController@getAjaxData');
 
@@ -52,9 +52,8 @@ Route::get('reporteGeneradob','ReportsController@pdfCompra')->name('reporteGener
 
 Route::get('reporteGeneradoc','ReportsController@pdfInv')->name('reporteGeneradoc')->middleware('auth');
 
-//Route::get('reporteGenerado','GeneratedReportController@showReport')->middleware('auth');
-
-Route::get('administrarUsuarios','ManageUsersController@showManagement')->middleware('auth');
+Route::resource('administrarUsuarios','ManageUsersController')->middleware('auth');
+Route::get('manageUsers/{id}', 'ManageUsersController@getAjaxData');
 
 Route::get('acercaDe','AboutController@showAbout')->middleware('auth');
 

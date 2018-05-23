@@ -8,11 +8,31 @@
 
   class ManageUsersController extends Controller{
 
-    public function showManagement(){
-      $users = array(array('CAQA961130MDFLNN02','Andrea Lizeth','Calleja','Quintanar','Administrador'));
-      $roles = ['Administrador','Cajero','Otro'];
+    public function index(){
+      $users = User::all();
       $users_sum = User::all()->count();
-      return View::make('manage_users.index',compact('users','roles','users_sum'));
+      return View::make('manage_users.index',compact('users','users_sum'));
+    }
+
+    public function store(Request $request){
+      $user= User::find($request->id);
+      $user->role_id=$request->role_id;
+      $message = 'Se ha actualizado de forma exitosa el rol de ' . $user->name;
+      $users=User::all();
+
+      $user->save();
+      return redirect()->route('administrarUsuarios.index',compact('users'))->with('success',$message);
+    }
+
+    public function getAjaxData($id){
+      $user = User::where(["id"=>$id])->get()->first();
+      return response()->json([
+          'myid' => $user->id,
+          'nombre' => $user->name,
+          'primer_apellido' => $user->first_surname,
+          'segundo_apellido' => $user->second_surname,
+          'rol' => $user->role_id
+      ]);
     }
 
   }

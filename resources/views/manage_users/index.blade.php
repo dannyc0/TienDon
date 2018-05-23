@@ -3,26 +3,22 @@
 @section('usersSum',$users_sum)
 
 @section('roles')
-  @foreach ($roles as $rol)
-    <option>{{$rol}}</option>
-  @endforeach
+  <option value="1">Administrador</option>
+  <option value="2">Cajero</option>
 @endsection
 
 @section('rowData')
     @foreach ($users as $element)
-      <td>{{$element[0]}}</td>
-      <td>{{$element[1]}}</td>
-      <td>{{$element[2]}}</td>
-      <td>{{$element[3]}}</td>
-      <td>{{$element[4]}}</td>
-    @endforeach
-@endsection
-
-@section('rowData2')
-    @foreach ($users as $element)
-      <td>{{$element[1]}}</td>
-      <td>{{$element[2]}}</td>
-      <td>{{$element[3]}}</td>
-      <td>{{$element[4]}}</td>
+      <tr>
+        <td>{{$element->name}}</td>
+        <td>{{$element->first_surname}}</td>
+        <td>{{$element->second_surname}}</td>
+        <td>{{{$element->role_id==1 ? 'Administrador' : 'Cajero' }}}</td>
+        <td>
+          <button class="btn btn-outline-success" id="{{$element->id}}" onclick="updateRequest('Usuario',this.id)" >
+            <i class="fas fa-edit"></i>
+          </button>
+        </td>
+      </tr>
     @endforeach
 @endsection

@@ -91,10 +91,12 @@ $("#nombreCategoria,#nombreProveedor").focusout(function(){
 });
 
 function updateRequest(txt,id){
-	$("#buttonAdd").css("display","none");
-	$("#buttonUpdate").css("display","inline");
-	$("#buttonNew").css("display","inline");
-	$("#titleForm").text("Actualizar "+txt);
+	if(txt!="Usuario"){
+		$("#buttonAdd").css("display","none");
+		$("#buttonUpdate").css("display","inline");
+		$("#buttonNew").css("display","inline");
+		$("#titleForm").text("Actualizar "+txt);
+	}
 	window.location.hash = '#formCard';
 
 	if(txt=="Categoría"){
@@ -161,6 +163,32 @@ function updateRequest(txt,id){
 			}
 		});
 		$("#chances").val('true');
+	}
+
+	if(txt=="Usuario"){
+		$.ajax({
+			method: 'get',
+			url: 'manageUsers/' + id,
+			dataType: "json",
+			success: function(data){
+					$("#id").val(data.myid);
+					$("#userName").html(data.nombre);
+					$("#firstSurname").html(data.primer_apellido);
+					$("#secondSurname").html(data.segundo_apellido);
+					if (data.rol==1) {
+						$("#userRole").html("Administrador");
+					}else{
+						$("#userRole").html("Cajero");
+					}
+
+			},
+			statusCode: {
+					500: function() {
+					},
+					422: function(data) {
+					}
+			}
+		});
 	}
 }
 

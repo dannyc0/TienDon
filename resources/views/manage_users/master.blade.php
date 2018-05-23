@@ -3,6 +3,11 @@
 @section('pageTitle','Escritorio')
 
 @section('content')
+  @if($message = Session::get('success'))
+    <div class="alert alert-success text-center">
+      <p>{{ $message }}</p>
+    </div>
+  @endif
 @if (Auth::user()->role_id==1)
   <div class="card-container light-font">
     <div class="summary-card secondary-color">
@@ -21,63 +26,63 @@
   </div>
 @endif
 <div class="contenedor">
-  <form>
-        <div class="form-group">
-          <h3>Usuarios</h3>
-          <br>
-        <div class="table-responsive">
-          <table class="table table-bordered">
-    				<thead class="thead-light">
-      				<tr>
-       			      <th>CURP</th>
-       					  <th>Nombre(S)</th>
-        					<th>Primer Apellido</th>
-                  <th>Segundo Apellido</th>
-                  <th>Rol</th>
-        					<th>Acciones</th>
-      				</tr>
-   				  </thead>
-  			    <tbody>
-                @yield('rowData')
-            </tbody>
-           </table>
-         </div>
-       </div>
-     </form>
+    <div class="form-group">
+      <h3>Usuarios</h3>
+      <br>
+    <div class="table-responsive">
+      <table class="table table-bordered">
+				<thead class="thead-light">
+  				<tr>
+   					  <th>Nombre(S)</th>
+    					<th>Primer Apellido</th>
+              <th>Segundo Apellido</th>
+              <th>Rol</th>
+    					<th>Acciones</th>
+  				</tr>
+				  </thead>
+		    <tbody>
+            @yield('rowData')
+        </tbody>
+       </table>
+     </div>
+   </div>
 </div>
-<div class="contenedor">
-  <form>
+<div class="contenedor" id="formCard">
     <div class="form-group">
       <h3>Cambiar Rol</h3><br>
       <div class="table-responsive">
         <table class="table table-md">
           <thead class="thead-light">
             <tr>
-              <th>Nombre(S):</th>
-              <th>Primer Apellido:</th>
-              <th>Segundo Apellido:</th>
-              <th>Rol:</th>
+              <th>Nombre(S)</th>
+              <th>Primer Apellido</th>
+              <th>Segundo Apellido</th>
+              <th>Rol</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-                @yield('rowData2')
+              <td id="userName"></td>
+              <td id="firstSurname"></td>
+              <td id="secondSurname"></td>
+              <td id="userRole"></td>
             </tr>
           </tbody>
           </table>
           <br>
           <br>
-          <label>Seleccionar Rol:</label>
-          <select class="form-control">
-            @yield('roles')
-          </select>
-          <div class="text-right">
-            <br>
-            <button type="submit" class="btn btn-outline-primary">
-                    Agregar
-            </button>
-          </div>
+          <form action="" method="post">
+            <input id="id" name="id" style="display:none">
+            <label>Seleccionar Rol:</label>
+            <select class="form-control" name="role_id">
+              @yield('roles')
+            </select>
+            <div class="text-right">
+              <br>
+              <button type="submit" class="btn btn-outline-primary">Guardar cambios</button>
+            </div>
+            @csrf
+          </form>
         </div>
-      </form>
     </div>
 @endsection
