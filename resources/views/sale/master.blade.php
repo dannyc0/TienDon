@@ -53,14 +53,18 @@
         <h3>Buscar</h3>
         <br>
         </select>
+        <div class="form-row">
+        <div class="col-md-10 mb-3">
         <label>Fecha:</label>
         <input type="date" class="form-control" name="date" >
-        <div class="text-right">
+      </div>
+        <div class=" col-md-2 mb-3 form-button2">
           <br>
           <button type="submit" class="btn btn-outline-primary">
             Buscar
           </button>
         </div>
+      </div>
       </div>
       @csrf
     </form>
