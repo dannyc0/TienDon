@@ -38,18 +38,8 @@
       				</tr>
    				  </thead>
   			    <tbody>
-    			     <tr>
-                  @yield('rowData')
-        					<td>
-                    <button type="submit" class="btn btn-outline-success">
-                        Administrar
-                    </button>
-                    <button type="submit" class="btn btn-outline-danger">
-                        Eliminar
-                    </button>
-                  </td>
-                </tr>
-             </tbody>
+                @yield('rowData')
+            </tbody>
            </table>
          </div>
        </div>
@@ -58,6 +48,7 @@
 <div class="contenedor">
   <form>
     <div class="form-group">
+      <h3>Cambiar Rol</h3><br>
       <div class="table-responsive">
         <table class="table table-md">
           <thead class="thead-light">

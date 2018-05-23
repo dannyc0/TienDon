@@ -28,7 +28,8 @@ Route::get('inventory/{id}', 'InventoryController@getAjaxData');
 
 Route::get('iniciarVenta','NewSaleController@showNewSale')->middleware('auth');
 
-Route::get('personalInfo','PersonalInfoController@showPersonalInfo')->middleware('auth');
+Route::get('personalInfo','PersonalInfoController@showPersonalInfo')->name('indexPersonalInfo')->middleware('auth');
+Route::post('personalInfo','PersonalInfoController@updatePersonalInfo')->name('updatePersonalInfo')->middleware('auth');
 
 Route::resource('categorias','CategoryController')->middleware('auth');
 Route::get('category/{id}', 'CategoryController@getAjaxData');
