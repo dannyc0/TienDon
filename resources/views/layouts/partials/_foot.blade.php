@@ -72,17 +72,22 @@ $('#searchProduct').on('input', function() {
 	});
 });
 
-$("#nombreCategoria").focusout(function(){
+$("#nombreCategoria,#nombreProveedor").focusout(function(){
 	if($("#chances").val()=="false"){
 		var randomNumber = Math.floor((Math.random() * 99) + 10);
 		if(randomNumber>100){
 			randomNumber-=10;
 		}
-		var firstLetters = document.getElementById("nombreCategoria").value;
-		var code = firstLetters.substring(0,4)+randomNumber;
-		$("#codigoCategoria").val(code);
+		if($("#titleForm").text()=="Nuevo Proveedor") {
+			var firstLetters = document.getElementById("nombreProveedor").value;
+			var code = firstLetters.substring(0,4)+randomNumber;
+			$("#codigoProveedor").val(code);
+		}else{
+			var firstLetters = document.getElementById("nombreCategoria").value;
+			var code = firstLetters.substring(0,4)+randomNumber;
+			$("#codigoCategoria").val(code);
+		}
 	}
-
 });
 
 function updateRequest(txt,id){
@@ -136,6 +141,27 @@ function updateRequest(txt,id){
 			}
 		});
 	}
+
+	if(txt=="Proveedor"){
+		$("#codigoProveedor").prop("readonly",true);
+		$.ajax({
+			method: 'get',
+			url: 'supplier/' + id,
+			dataType: "json",
+			success: function(data){
+					$("#codigoProveedor").val(data.myid);
+					$("#nombreProveedor").val(data.nombre);
+					$("#telefonoProveedor").val(data.telefono);
+			},
+			statusCode: {
+					500: function() {
+					},
+					422: function(data) {
+					}
+			}
+		});
+		$("#chances").val('true');
+	}
 }
 
 $('#buttonNew').click(function(){
@@ -160,6 +186,14 @@ $('#buttonNew').click(function(){
 		$("#costoProducto").val("");
 		$("#precioProducto").val("");
 		$("#titleForm").text("Nuevo Producto");
+	}
+	if($("#titleForm").text()=="Actualizar Proveedor") {
+		$("#codigoProveedor").prop("readonly",false);
+		$("#codigoProveedor").val("");
+		$("#nombreProveedor").val("");
+		$("#telefonoProveedor").val("");
+		$("#chances").val('false');
+		$("#titleForm").text("Nuevo Proveedor");
 	}
 	$("#buttonForm").text("Agregar");
 	$("#reqType").val("add");

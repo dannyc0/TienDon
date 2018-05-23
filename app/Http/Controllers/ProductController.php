@@ -25,30 +25,23 @@
     public function store(Request $request){
       if($request->reqType == "add"){
         $product = new Producto();
-        $product->id=$request->id;
-        $product->categoria_id_categoria1=$request->category;
-        $product->proveedor_id_proveedor=$request->supplier;
-        $product->nombre_producto=$request->name;
-        $product->costo_producto=$request->cost;
-        $product->precio_producto=$request->price;
-        $product->cantidad_producto=0;
-        $product->tipo_producto=$request->type;
-        $product->presentacion_producto=$request->presentation;
 
         $message = 'Se ha creado de forma exitosa la categoría '.$request->name;
       }else{
         $product = Producto::find($request->id);
-        $product->id=$request->id;
-        $product->categoria_id_categoria1=$request->category;
-        $product->proveedor_id_proveedor=$request->supplier;
-        $product->nombre_producto=$request->name;
-        $product->costo_producto=$request->cost;
-        $product->precio_producto=$request->price;
-        $product->cantidad_producto=0;
-        $product->tipo_producto=$request->type;
-        $product->presentacion_producto=$request->presentation;
+
         $message = 'Se ha actualizado de forma exitosa la categoría '.$request->name;
       }
+      $product->id=$request->id;
+      $product->categoria_id_categoria1=$request->category;
+      $product->proveedor_id_proveedor=$request->supplier;
+      $product->nombre_producto=$request->name;
+      $product->costo_producto=$request->cost;
+      $product->precio_producto=$request->price;
+      $product->cantidad_producto=0;
+      $product->tipo_producto=$request->type;
+      $product->presentacion_producto=$request->presentation;
+
       $products= Producto::all();
       $product->save();
       return redirect()->route('productos.index',compact('products'))->with('success',$message);

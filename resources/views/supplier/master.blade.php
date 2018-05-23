@@ -22,7 +22,6 @@
     </div>
   @endif
   <div class="contenedor">
-    <form action="{{ route('categorias.store') }}" method="post">
         <div class="form-group">
           <h3>Buscar Proveedor</h3>
           <br>
@@ -50,30 +49,33 @@
             </table>
           </div>
         </div>
-      </form>
     </div>
-  <div class="contenedor">
-  <form>
-          <div class="form-group">
-            <h3>Nuevo Proveedor</h3>
+  <div class="contenedor" id="formCard">
+    <form action="{{ route('proveedores.store') }}" method="post">
+        <div class="form-group">
+          <h3 id="titleForm">Nuevo Proveedor</h3>
+          <br>
+          <input type="text" id="reqType" name="reqType" value="add" style="display:none">
+          <input type="text" id="chances" value="false" style="display:none">
+
+          <label>Código:</label>
+          <input type="text" name="id" class="form-control" readonly="" id="codigoProveedor" required>
+
+          <label>Nombre:</label>
+          <input type="text" name="name" class="form-control" id="nombreProveedor" required>
+
+          <label>Teléfono:</label>
+          <input type="text" name="telephone" class="form-control" id="telefonoProveedor" pattern="[0-9]{5,15}" required>
+
+          <br>
+          <div class="text-right">
             <br>
-            <label>Código:</label>
-            <input type="text" name="" class="form-control" readonly="" id="codigoProveedor">
-            <label>Nombre:</label>
-            <input type="text" name="" class="form-control" id="nombreProveedor">
-            <label>Teléfono:</label>
-            <input type="text" class="form-control" id="telefonoProveedor">
-            <br>
-            <div class="text-right">
-              <br>
-              <button type="submit" class="btn btn-outline-primary" id="botonProveedor">
-                Agregar
-              </button>
-              <!--<button type="submit" class="btn btn-outline-success">
-                Guardar Cambios
-              </button>-->
-            </div>
+            <button type="submit" class="btn btn-outline-primary" id="buttonAdd">Agregar</button>
+            <button id="buttonUpdate" style="display:none" class='btn btn-outline-success' type="submit">Actualizar</button>
+            <button class='btn btn-outline-primary' onclick='newForm()' id="buttonNew" type='button' style="display:none">Nuevo</button>
           </div>
+        </div>
+        @csrf
     </form>
   </div>
 @endsection

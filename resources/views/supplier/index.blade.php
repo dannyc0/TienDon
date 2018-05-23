@@ -2,6 +2,14 @@
 
 @section('supplierSum',$suppliers_sum)
 
+@section('message')
+  @if($message = Session::get('success'))
+    <div class="alert alert-success text-center">
+      <p>{{ $message }}</p>
+    </div>
+  @endif
+@endsection
+
 @section('code')
     @foreach ($suppliers as $supplier)
       <option>{{$supplier['id_proveedor']}}</option>
