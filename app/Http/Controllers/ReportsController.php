@@ -10,6 +10,8 @@
   use App\Producto;
   use Barryvdh\DomPDF\Facade as PDF;
   use Illuminate\Http\Request;
+  use Illuminate\Support\Facades\DB;
+  use Illuminate\Http\Response;
 
   class ReportsController extends Controller{
 
@@ -17,14 +19,18 @@
 
     	$ventas=DetalleVenta::all();
     	$products=Producto::all();
-    	$reportsV=array(array("2018-05-14","Ventas","2018-05-15","Compras","2018-06-22","Inventario"));
+    	$reportsV=array(array("Ventas","Compras","Inventario"));
       return View::make('reports.index',compact('reportsV','ventas','products'));//,compact());
     }
 
-    public function pdf(){
-
-    	$date= date('Y-m-d');
-    	$ventas=DetalleVenta::all();
+    public function pdf(Request $request){
+      $date = $request->date . "%";
+    	//$date= date('Y-m-d');
+    	$ventas= DB::table('detalle_venta')
+      //->join('producto','producto.id','=','detalle_venta.producto_id_producto')
+      ->select('venta_id_venta','producto_id_producto','cantidad_venta')
+      ->where('venta_id_venta', 'LIKE', $date)
+      ->get();
     	$products=Producto::all();
     	$pdf = PDF::loadView('reports.generated', compact('products','ventas', 'date'));
 
