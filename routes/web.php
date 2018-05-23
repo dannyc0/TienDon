@@ -40,7 +40,8 @@ Route::get('product/{id}', 'ProductController@getAjaxData');
 Route::resource('proveedores','SupplierController')->middleware('auth');
 Route::get('supplier/{id}', 'SupplierController@getAjaxData');
 
-Route::get('venta','SaleController@showSale')->middleware('auth');
+Route::get('venta','SaleController@index')->name('ventas.index')->middleware('auth');
+Route::post('venta','SaleController@fetchDate')->name('fetchSale')->middleware('auth');
 
 Route::get('reportes','ReportsController@showReports')->middleware('auth');
 

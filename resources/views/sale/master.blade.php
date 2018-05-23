@@ -48,54 +48,44 @@
   @endif
 
 <div class="contenedor">
-  <form>
-          <div class="form-group">
-            <h3>Registro De Ventas</h3>
-            <br>
-            </select>
-            <label>Fecha:</label>
-            <input type="date" class="form-control">
-            <div class="text-right">
-                  <br>
-                  <button type="submit" class="btn btn-outline-primary">
-                    Buscar
-                  </button>
-            </div>
+  <form action="{{ route('fetchSale') }}" method="post">
+      <div class="form-group">
+        <h3>Buscar</h3>
+        <br>
+        </select>
+        <label>Fecha:</label>
+        <input type="date" class="form-control" name="date" >
+        <div class="text-right">
+          <br>
+          <button type="submit" class="btn btn-outline-primary">
+            Buscar
+          </button>
         </div>
+      </div>
+      @csrf
     </form>
   </div>
   <div class="contenedor">
-    <form>
+        <h3>Registro <strong>@yield('date')</strong></h3><br>
         <div class="form-group">
           <div  class="table-responsive">
           <table class="table table-bordered">
   				<thead class="thead-light">
     				<tr>
-     					 <th>Fecha:</th>
-     					 <th>Monto:</th>
-               <th>Ganancia:</th>
-               <th>Numero de Ventas</th>
-                 <th>Cajero:</th>
-      					 <th></th>
+     					 <th>Cajero:</th>
+     					 <th>Produtos vendidos:</th>
+               <th>Monto:</th>
     				</tr>
  				 </thead>
-  			<tbody>
-    				<tr>
-      				@yield('rowData')
-      				<td>
-                <center><button type="submit" class="btn btn-outline-danger">
-                    Eliminar
-              </button></center>
-              </td>
-    </tr>
- </tbody>
+  			 <tbody>
+           @yield('rowData')
+         </tbody>
 </table>
-<br><label>Total de ventas: @yield('totalVentas')</label><br>
+<br><label>Total de productos vendidos: @yield('totalVentas')</label><br>
 
-<br><label>Total de ganancias: @yield('totalganancias')</label>
+<br><label>Monto total: $@yield('totalGanancias')</label>
 
 </div>
 </div>
-</form>
 </div>
 @endsection

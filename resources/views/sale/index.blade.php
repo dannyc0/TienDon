@@ -6,11 +6,33 @@
 
 @section('gain',$gain->Ganancia)
 
+
 @section('rowData')
+  @if($seller_details = Session::get('result'))
     @foreach ($seller_details as $element)
-      <td>{{$element[0]}}</td>
-      <td>{{$element[1]}}</td>
-      <td>{{$element[2]}}</td>
-      <td>{{$element[3]}}</td>
+      <tr>
+        <td>{{$element->name}}</td>
+        <td>{{$element->cantidad_ventas}}</td>
+        <td>{{$element->total_ventas}}</td>
+      </tr>
     @endforeach
+  @endif
+@endsection
+
+@section('date')
+  @if($date = Session::get('date'))
+    {{$date}}
+  @endif
+@endsection
+
+@section('totalVentas')
+  @if($products_sold = Session::get('products_sold'))
+    {{$products_sold}}
+  @endif
+@endsection
+
+@section('totalGanancias')
+  @if($total_sold = Session::get('total_sold'))
+    {{$total_sold}}
+  @endif
 @endsection
