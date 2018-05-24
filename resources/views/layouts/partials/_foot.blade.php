@@ -90,6 +90,16 @@ $("#nombreCategoria,#nombreProveedor").focusout(function(){
 	}
 });
 
+$("#dateReport").focusout(function(){
+	var url = '{{url("reporteGenerado",":date")}}';
+	url = url.replace('%3Adate', $(this).val());
+	$("#saleReport").prop("href",url);
+
+	var url2 = '{{url("reporteGeneradob",":date")}}';
+	url2 = url2.replace('%3Adate', $(this).val());
+	$("#purchaseReport").prop("href",url2);
+});
+
 function updateRequest(txt,id){
 	if(txt!="Usuario"){
 		$("#buttonAdd").css("display","none");

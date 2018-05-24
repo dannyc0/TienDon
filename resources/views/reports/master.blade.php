@@ -15,11 +15,11 @@
                 <div class="col-md-2 text-right">
               <label>Filtrar por fecha:</label>
             </div>
-             <div class="col-md-8 mb-3"> 
-              <input type="date" class="form-control" name="date" placeholder="dd/mm/aaaa">
+             <div class="col-md-8 mb-3">
+              <input type="date" id="dateReport" class="form-control" name="date" placeholder="dd/mm/aaaa">
             </div>
           </div>
-        
+
             <br>
             <center><div class="table-responsive col-md-8">
               <table class="table table-bordered">
@@ -34,7 +34,7 @@
                      <tr>
                          @yield('rowData')
                          <td>
-                          <center><a href="{{ route('reporteGenerado',['date'=>'2018-05-22'])}}" class="btn btn-outline-success"> Descargar </a>
+                          <center><a href="" class="btn btn-outline-success" id="saleReport"> Descargar </a>
                           <!--<button type="submit" class="btn btn-outline-danger">
                              Eliminar
                            </button></center>-->
@@ -43,7 +43,7 @@
                         <tr>
                          @yield('rowData2')
                          <td>
-                          <center><a href="{{ route('reporteGeneradob',['date'=>'2018-05-22'])}}" class="btn btn-outline-success"> Descargar </a>
+                          <center><a href="" class="btn btn-outline-success" id="purchaseReport"> Descargar </a>
                           <!--<button type="submit" class="btn btn-outline-danger">
                              Eliminar
                            </button></center>-->
