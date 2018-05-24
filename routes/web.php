@@ -47,9 +47,9 @@ Route::post('venta','SaleController@fetchDate')->name('fetchSale')->middleware('
 Route::get('reportes','ReportsController@showReports')->middleware('auth');
 
 
-Route::get('reporteGenerado','ReportsController@pdf')->name('reporteGenerado')->middleware('auth');
+Route::get('reporteGenerado/{date}','ReportsController@pdf')->name('reporteGenerado')->middleware('auth');
 
-Route::get('reporteGeneradob','ReportsController@pdfCompra')->name('reporteGeneradob')->middleware('auth');
+Route::get('reporteGeneradob/{date}','ReportsController@pdfCompra')->name('reporteGeneradob')->middleware('auth');
 
 Route::get('reporteGeneradoc','ReportsController@pdfInv')->name('reporteGeneradoc')->middleware('auth');
 

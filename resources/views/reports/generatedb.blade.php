@@ -40,7 +40,7 @@
             @foreach($compras as $compra)
             <tr>
               <td> {{$compra->compra_id_compra}} </td>    
-              <td> {{$compra->producto_id_producto}} </td>
+              <td> {{$compra->nombre}} </td>
               <td> {{$compra->cantidad_compra}} </td>
             </tr>
             @endforeach
