@@ -100,6 +100,50 @@ $("#dateReport").focusout(function(){
 	$("#purchaseReport").prop("href",url2);
 });
 
+$("#addSale").click(function(){
+	var id = $("#searchProduct").val();
+	var quantity = $("#quantity").val();
+	var total = parseFloat($("#totalDue").html());
+	var detailHTML = "";
+	$.ajax({
+		method: 'get',
+		url: 'newSale/' + id,
+		dataType: "json",
+		success: function(data){
+			 detailHTML = "";
+			 detailHTML += "<tr " + " id='" + data.myid + "'>";
+       detailHTML += "<td>" + data.myid + "</td>";
+       detailHTML += "<td>" + data.nombre + "</td>";
+			 detailHTML += "<td>" + quantity + "</td>";
+			 detailHTML += "<td>$" + data.precio + "</td>";
+			 detailHTML += "<td>$" + quantity*data.precio + "</td>";
+			 detailHTML += "<td>" + '<button onclick="deleteRow('+data.myid+')" type="submit" class="btn btn-outline-danger"><i class="fas fa-trash-alt"></i>' + '</button>' + "</td>";
+       detailHTML += "</tr>";
+			 $("#saleDetail").append(detailHTML);
+			 total+=quantity*data.precio;
+			 $("#totalDue").html(total);
+		},
+		statusCode: {
+				500: function() {
+				},
+				422: function(data) {
+				}
+		}
+	});
+});
+
+$("#finishSale").click(function(){
+	$("#saleDetail").empty();
+	$("#totalDue").html("0");
+	$("#cash").val("0");
+	$("#searchProduct").val("0");
+});
+
+function deleteRow(id){
+	$("#"+id).remove();
+	$("#totalDue").html("0");
+}
+
 function updateRequest(txt,id){
 	if(txt!="Usuario"){
 		$("#buttonAdd").css("display","none");

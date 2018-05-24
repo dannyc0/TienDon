@@ -27,6 +27,7 @@ Route::resource('inventario','InventoryController')->middleware('auth');
 Route::get('inventory/{id}', 'InventoryController@getAjaxData');
 
 Route::get('iniciarVenta','NewSaleController@showNewSale')->middleware('auth');
+Route::get('newSale/{id}', 'NewSaleController@getAjaxData');
 
 Route::get('personalInfo','PersonalInfoController@showPersonalInfo')->name('indexPersonalInfo')->middleware('auth');
 Route::post('personalInfo','PersonalInfoController@updatePersonalInfo')->name('updatePersonalInfo')->middleware('auth');
@@ -45,7 +46,6 @@ Route::get('venta','SaleController@index')->name('ventas.index')->middleware('au
 Route::post('venta','SaleController@fetchDate')->name('fetchSale')->middleware('auth');
 
 Route::get('reportes','ReportsController@showReports')->middleware('auth');
-
 
 Route::get('reporteGenerado/{date}','ReportsController@pdf')->name('reporteGenerado')->middleware('auth');
 
